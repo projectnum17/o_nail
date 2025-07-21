@@ -1,0 +1,26 @@
+:root {
+    --container-width: 1728px;
+    --container-padding: 64px;
+
+    --ff-base: 'Geologica', sans-serif;
+
+    --dark-red: #c30b16;
+    --accent-red: #d70c18;
+    --almost-black: #191919;
+    --grey: #525252;
+    --light-grey: #dfe1e3;
+    --white: #ffffff;
+    --bgc-color: #f5f7f9;
+}
+
+@media (max-width: 1700px) {
+    :root {
+        --container-padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --container-padding: 20px;
+    }
+}

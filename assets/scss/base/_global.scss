@@ -1,0 +1,126 @@
+@use 'mixins' as *;
+@use 'media' as *;
+@use 'var' as *;
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    // overflow-anchor: none;
+    font: 400 16px/1.5 var(--ff-base);
+    min-height: 100vh;
+    color: var(--almost-black);
+    background: var(--bgc-color);
+
+    &.is-locked {
+        overflow: hidden;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+main {
+    flex: 1;
+}
+
+button {
+    @include reset_button;
+    display: flex;
+}
+
+a {
+    @include reset_link;
+}
+
+.container {
+    max-width: var(--container-width);
+    width: 100%;
+    padding-inline: var(--container-padding);
+    margin: 0 auto;
+}
+
+.container--right {
+    padding-left: calc(
+        (100% - var(--container-width)) / 2 + var(--container-padding)
+    );
+
+    @media (max-width: 1510px) {
+        & > div:first-child {
+            padding-left: 20px;
+        }
+    }
+}
+
+.container--left {
+    padding-right: calc(
+        (100% - var(--container-width)) / 2 + var(--container-padding)
+    );
+}
+
+section {
+    @include media('mobile') {
+        scroll-margin-top: 56px;
+    }
+}
+
+.h1 {
+    font: 400 64px / 100% var(--ff-base);
+    letter-spacing: -3px;
+    span {
+        color: var(--accent-red);
+    }
+}
+
+.h2 {
+    font: 400 48px / 100% var(--ff-base);
+    letter-spacing: -2px;
+    span {
+        color: var(--accent-red);
+    }
+}
+
+.h3 {
+    font: 500 32px / 100% var(--ff-base);
+    letter-spacing: -1px;
+    span {
+        color: var(--accent-red);
+    }
+
+    @include media('tablet') {
+        font-size: 28px;
+    }
+
+    @include media('mobile') {
+        font-size: 24px;
+    }
+}
+
+.h4 {
+    font: 500 24px / 100% var(--ff-base);
+    letter-spacing: -1px;
+    span {
+        color: var(--accent-red);
+    }
+}
+
+.md-text {
+    font: 400 20px / 140% var(--ff-base);
+    color: var(--grey);
+}
+
+.sm-text {
+    font: 400 18px / 140% var(--ff-base);
+    color: var(--grey);
+}
