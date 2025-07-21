@@ -4,10 +4,11 @@
 .header {
     padding-block: 10px;
     position: fixed;
+    z-index: 2;
     width: 100%;
     top: 0;
     background: var(--white);
-
+    border-bottom: 1px solid rgba(25, 25, 25, 0.1);
     @include media('desktop') {
         height: 66px;
     }

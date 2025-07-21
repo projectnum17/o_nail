@@ -81,6 +81,14 @@ section {
     span {
         color: var(--accent-red);
     }
+
+    @include media('tablet') {
+        font-size: 48px;
+    }
+
+    @include media('mobile') {
+        font-size: 32px;
+    }
 }
 
 .h2 {
