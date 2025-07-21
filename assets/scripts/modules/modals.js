@@ -5,15 +5,17 @@ const initModal = ({
     closeSelector,
 }) => {
     const modal = document.querySelector(modalSelector),
-        openBtn = document.querySelector(openSelector),
+        openBtns = document.querySelectorAll(openSelector),
         modalBox = document.querySelector(boxSelector),
         closeBtn = document.querySelector(closeSelector);
 
-    if (!modal || !openBtn || !modalBox || !closeBtn) return;
+    if (!modal || !openBtns || !modalBox || !closeBtn) return;
 
-    openBtn.addEventListener('click', () => {
-        modal.classList.add('shown');
-        document.body.style.overflow = 'hidden';
+    openBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            modal.classList.add('shown');
+            document.body.style.overflow = 'hidden';
+        });
     });
 
     closeBtn.addEventListener('click', () => {
