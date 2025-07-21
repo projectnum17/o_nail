@@ -1,0 +1,144 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+.main--change {
+    .content {
+        padding-bottom: 160px;
+
+        @include media('tablet') {
+            padding-bottom: 80px;
+        }
+
+        @include media('mobile') {
+            padding-bottom: 40px;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
+        }
+
+        &__info {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+
+            @include media('tablet') {
+                flex-direction: column;
+            }
+        }
+
+        &__about {
+            flex: 1;
+            padding: 60px;
+            border-radius: 16px;
+            background: var(--white);
+
+            @include media('tablet') {
+                padding: 40px;
+            }
+
+            @include media('mobile') {
+                padding: 20px;
+            }
+        }
+
+        p {
+            font: 300 18px / 140% var(--ff-base);
+            letter-spacing: -1px;
+            color: var(--grey);
+
+            @include media('tablet') {
+                font-size: 16px;
+            }
+
+            @include media('mobile') {
+                font-size: 14px;
+            }
+
+            &:has(+ h4) {
+                margin-bottom: 40px;
+
+                @include media('mobile') {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+
+        ul {
+            padding-left: 20px;
+
+            li {
+                font: 300 18px / 140% var(--ff-base);
+                letter-spacing: -1px;
+                color: var(--grey);
+
+                @include media('tablet') {
+                    font-size: 16px;
+                }
+
+                @include media('mobile') {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        ol {
+            margin: 0;
+            padding: 0;
+            counter-reset: count;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+
+            li {
+                counter-increment: count;
+                font: 300 18px / 140% var(--ff-base);
+                letter-spacing: -1px;
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+
+                @include media('tablet') {
+                    font-size: 16px;
+                }
+
+                @include media('mobile') {
+                    font-size: 14px;
+                }
+                &::before {
+                    content: counter(count, decimal-leading-zero);
+                    font: 600 20px / 100% var(--ff-base);
+                    letter-spacing: -1px;
+                    color: var(--accent-red);
+
+                    @include media('tablet') {
+                        font-size: 18px;
+                    }
+
+                    @include media('mobile') {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        h4 {
+            font: 500 24px / 100% var(--ff-base);
+            letter-spacing: -1px;
+            margin: 0 0 24px;
+
+            @include media('tablet') {
+                font-size: 20px;
+            }
+
+            @include media('mobile') {
+                font-size: 18px;
+            }
+        }
+    }
+}

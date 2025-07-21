@@ -1,0 +1,116 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--faq {
+    .content {
+        padding-bottom: 160px;
+
+        @include media('tablet') {
+            padding-bottom: 80px;
+        }
+
+        @include media('mobile') {
+            padding-bottom: 40px;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__info {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+
+            @include media('tablet') {
+                flex-direction: column;
+            }
+        }
+
+        &__faq {
+            flex: 1;
+            padding: 60px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: var(--white);
+
+            @include media('tablet') {
+                padding: 40px;
+            }
+
+            @include media('mobile') {
+                padding: 20px;
+            }
+        }
+
+        .faq-box {
+            padding: 17px 23px;
+            border-radius: 16px;
+            cursor: pointer;
+            border: 1px solid rgba(25, 25, 25, 0.2);
+            @include transitions(0.3s);
+
+            @include media('mobile') {
+                padding: 12px 15px;
+                border-radius: 12px;
+            }
+
+            &__title {
+                font: 500 18px / 100% var(--ff-base);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+
+                @include media('mobile') {
+                    font-size: 16px;
+                }
+
+                &::after {
+                    content: '';
+                    display: inline-flex;
+                    transform: rotate(-45deg);
+                    flex-shrink: 0;
+                    width: 28px;
+                    height: 28px;
+                    background: url('../images/icons/ico-close.svg') no-repeat
+                        center center;
+                    @include transitions(0.3s);
+                }
+            }
+
+            &__text {
+                display: grid;
+                grid-template-rows: 0fr;
+                @include transitions(0.3s);
+                p {
+                    font: 300 14px / 140% var(--ff-base);
+                    letter-spacing: -1px;
+                    overflow: hidden;
+                    color: var(--grey);
+                }
+            }
+
+            &.is-open {
+                border-color: var(--almost-black);
+
+                .faq-box__title {
+                    &::after {
+                        transform: rotate(0);
+                    }
+                }
+
+                .faq-box__text {
+                    padding-top: 11px;
+                    grid-template-rows: 1fr;
+                }
+            }
+        }
+    }
+}

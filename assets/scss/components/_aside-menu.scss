@@ -12,7 +12,7 @@
 
     @include media('tablet') {
         position: sticky;
-        bottom: 0;
+        bottom: 5px;
         top: auto;
         width: 100%;
         max-width: 100%;
@@ -28,6 +28,7 @@
         @include media('tablet') {
             flex-direction: row;
             overflow: scroll;
+            scroll-behavior: smooth;
             scrollbar-width: none;
             -ms-overflow-style: none;
             &::-webkit-scrollbar {
