@@ -128,10 +128,12 @@
         background: var(--accent-red);
         color: var(--white);
         @include transitions(0.3s);
-
         @include media('mobile') {
             font-size: 16px;
             padding: 15px;
+        }
+        @include hover {
+            background: var(--dark-red);
         }
 
         &.disable {

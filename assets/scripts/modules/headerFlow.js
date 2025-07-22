@@ -5,8 +5,11 @@ const headerFlow = () => {
     const menuItem = document.querySelector('.js-menu');
     const mobileSubmenu = document.querySelector('.js-mobile-submenu');
 
-    const originalParent = headerLogo?.parentElement;
-    const logoNextSibling = headerLogo?.nextElementSibling;
+    // если обязательные элементы отсутствуют — сразу выходим
+    if (!parent || !headerLogo || !logoTarget || !menuItem) return;
+
+    const originalParent = headerLogo.parentElement;
+    const logoNextSibling = headerLogo.nextElementSibling;
 
     let burgerBtn = null;
 
@@ -49,7 +52,7 @@ const headerFlow = () => {
         if (clientWidth < 1200) {
             if (!burgerBtn) {
                 burgerBtn = createBurger(menuItem);
-                parent?.prepend(burgerBtn);
+                parent.prepend(burgerBtn);
             }
             moveLogo(false);
         } else {
@@ -60,12 +63,13 @@ const headerFlow = () => {
 
             moveLogo(true);
 
-            if (menuItem) menuItem.classList.remove('show');
+            menuItem.classList.remove('show');
             if (burgerBtn) burgerBtn.classList.remove('is-active');
             toggleBodyScroll(false);
         }
     };
 
+    // submenu toggle
     if (mobileSubmenu) {
         mobileSubmenu.addEventListener('click', () => {
             mobileSubmenu.classList.toggle('show');

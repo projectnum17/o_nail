@@ -97,6 +97,14 @@ section {
     span {
         color: var(--accent-red);
     }
+
+    @include media('tablet') {
+        font-size: 36px;
+    }
+
+    @include media('mobile') {
+        font-size: 28px;
+    }
 }
 
 .h3 {

@@ -8,7 +8,7 @@ export const basketFlow = () => {
         basketPurchase = basketContainer?.querySelector('.js-purchase'),
         totalProductsBin = basketContainer?.querySelector('#totalProduct'),
         totalSumEl = basketContainer?.querySelector('#totalSum'),
-        emptyBasket = basketContainer.querySelector('.basket-empty');
+        emptyBasket = basketContainer?.querySelector('.basket-empty');
 
     if (
         !totalProductsValue ||
