@@ -34,6 +34,11 @@
         border-radius: 48px;
         background: #f5f7f9;
         border: 1px solid #dfe1e3;
+        @include transitions(.3s);
+
+        &:focus {
+            border-color: var(--grey);
+        }
 
         @include media('mobile') {
             padding: 7px 12px;

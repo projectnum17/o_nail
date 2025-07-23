@@ -124,6 +124,8 @@
 
         .payments {
             display: flex;
+            flex-wrap: wrap;
+            max-width: 75%;
             gap: 8px;
             align-items: stretch;
             margin-bottom: 40px;

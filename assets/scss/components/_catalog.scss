@@ -138,6 +138,9 @@
 
             @include hover {
                 span {
+                    &:first-child {
+                        color: var(--accent-red);
+                    }
                     &:last-child {
                         transform: translateX(3px);
                     }
@@ -148,7 +151,7 @@
                 &:first-child {
                     font: 300 16px / 100% var(--ff-base);
                     text-transform: uppercase;
-
+                    @include transitions(0.3s);
                     @include media('mobile') {
                         font-size: 14px;
                     }

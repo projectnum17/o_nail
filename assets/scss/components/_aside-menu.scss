@@ -45,8 +45,7 @@
         border-radius: 8px;
         @include transitions(0.3s);
         @include hover {
-            color: var(--white);
-            background: var(--accent-red);
+            background: #dfe1e3;
         }
         @include media('tablet') {
             padding: 8px;
@@ -59,6 +58,11 @@
         &--current {
             color: var(--white);
             background: var(--accent-red);
+
+            @include hover {
+                color: var(--white);
+                background: var(--accent-red);
+            }
         }
     }
 }

@@ -7,17 +7,42 @@ const form = () => {
         const phoneInput = form.querySelector('input[type="tel"]');
         if (phoneInput) {
             phoneInput.addEventListener('input', function (e) {
-                const value = e.target.value.replace(/\D/g, '');
-                const match = value.match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+                let value = e.target.value.replace(/\D/g, '');
+
+                if (value.length > 0 && !value.startsWith('38')) {
+                    value = '38' + value;
+                }
+
+                value = value.slice(0, 12);
+
+                const match = value.match(
+                    /(\d{2})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/
+                );
 
                 if (match) {
-                    e.target.value = !match[2]
-                        ? match[1]
-                        : '(' +
-                          match[1] +
-                          ') ' +
-                          match[2] +
-                          (match[3] ? '-' + match[3] : '');
+                    let formatted = '';
+
+                    if (match[1]) {
+                        formatted += '+ ' + match[1];
+                    }
+
+                    if (match[2]) {
+                        formatted += ' (' + match[2];
+                    }
+
+                    if (match[3]) {
+                        formatted += ') ' + match[3];
+                    }
+
+                    if (match[4]) {
+                        formatted += '-' + match[4];
+                    }
+
+                    if (match[5]) {
+                        formatted += '-' + match[5];
+                    }
+
+                    e.target.value = formatted;
                 }
             });
         }
