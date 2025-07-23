@@ -1,0 +1,73 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include media('mobile') {
+        gap: 12px;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        @include media('mobile') {
+            gap: 5px;
+        }
+    }
+
+    &__label {
+        font: 300 14px / 100% var(--ff-base);
+        opacity: 0.4;
+
+        @include media('mobile') {
+            font-size: 12px;
+        }
+    }
+
+    &__input {
+        padding: 11px 15px;
+        outline: none;
+        border-radius: 48px;
+        background: #f5f7f9;
+        border: 1px solid #dfe1e3;
+
+        @include media('mobile') {
+            padding: 7px 12px;
+        }
+    }
+
+    &__submit {
+        font: 300 16px / 100% var(--ff-base);
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 60px;
+        padding: 16px;
+        background: var(--accent-red);
+        color: var(--white);
+        @include transitions(0.3s);
+        @include hover {
+            background: var(--dark-red);
+        }
+
+        @include media('mobile') {
+            padding: 12px;
+        }
+    }
+
+    &__mess {
+        font: 300 14px / 100% var(--ff-base);
+        letter-spacing: -1px;
+        text-align: center;
+        color: var(--grey);
+
+        @include media('mobile') {
+            font-size: 12px;
+        }
+    }
+}
