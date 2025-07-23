@@ -2,5 +2,72 @@
 @use '../../base/mixins' as *;
 
 .main--news {
+    padding-bottom: 160px;
 
+    @include media('tablet') {
+        padding-bottom: 64px;
+    }
+
+    @include media('mobile') {
+        padding-bottom: 32px;
+    }
+    .news {
+        &__title {
+            margin-bottom: 40px;
+
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
+        }
+
+        &__filter {
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            border-bottom: 1px solid rgba(25, 25, 25, 0.2);
+
+            @include media('mobile') {
+                padding-bottom: 12px;
+                margin-bottom: 24px;
+                width: 100%;
+                overflow: scroll;
+                scroll-behavior: smooth;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            &-btn {
+                font: 300 16px / 100% var(--ff-base);
+                padding: 9px 15px;
+                border-radius: 44px;
+                border: 2px solid #dfe1e3;
+                &.active {
+                    border-color: var(--accent-red);
+                }
+                @include transitions(0.3s);
+                @include hover {
+                    border-color: var(--grey);
+                }
+                @include media('mobile') {
+                    flex: 1;
+                    min-width: max-content;
+                }
+            }
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            @include media('mobile') {
+                gap: 30px;
+            }
+        }
+    }
 }
