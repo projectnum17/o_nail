@@ -1,0 +1,125 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--legal {
+    .content {
+        padding-bottom: 160px;
+
+        @include media('tablet') {
+            padding-bottom: 80px;
+        }
+
+        @include media('mobile') {
+            padding-bottom: 40px;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__info {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+
+            @include media('tablet') {
+                flex-direction: column;
+            }
+        }
+
+        &__about {
+            max-width: 1040px;
+            flex: 1;
+            padding: 60px;
+            border-radius: 16px;
+            background: var(--white);
+
+            @include media('tablet') {
+                padding: 40px;
+            }
+
+            @include media('mobile') {
+                padding: 20px;
+            }
+        }
+
+        h2 {
+            font: 400 48px / 100% var(--ff-base);
+            margin: 0 0 24px;
+
+            @include media('tablet') {
+                font-size: 36px;
+            }
+
+            @include media('mobile') {
+                font-size: 28px;
+                margin: 0 0 18px;
+            }
+        }
+
+        h3 {
+            font: 500 32px / 100% var(--ff-base);
+            letter-spacing: -1px;
+
+            @include media('tablet') {
+                font-size: 28px;
+            }
+
+            @include media('mobile') {
+                font-size: 24px;
+            }
+        }
+
+        h4 {
+            font: 500 24px / 100% var(--ff-base);
+            letter-spacing: -1px;
+            margin: 0 0 20px;
+
+            @include media('tablet') {
+                font-size: 20px;
+            }
+
+            @include media('mobile') {
+                font-size: 18px;
+            }
+        }
+
+        p {
+            font: 300 18px / 140% var(--ff-base);
+            letter-spacing: -1px;
+            color: var(--grey);
+
+            @include media('tablet') {
+                font-size: 16px;
+            }
+
+            @include media('mobile') {
+                font-size: 14px;
+            }
+
+            &:first-of-type {
+                margin-bottom: 40px;
+
+                @include media('mobile') {
+                    margin-bottom: 24px;
+                }
+            }
+
+            &:has(+ h4) {
+                margin-bottom: 24px;
+            }
+
+            &:has(+ .attention) {
+                margin-bottom: 40px;
+
+                @include media('mobile') {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}
