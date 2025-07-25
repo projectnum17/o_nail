@@ -32,6 +32,7 @@
 
         &__about {
             max-width: 1040px;
+            width: 100%;
             flex: 1;
             padding: 60px;
             border-radius: 16px;
@@ -74,8 +75,10 @@
             }
 
             li {
-                font: 300 18px / 140% var(--ff-base);
-                letter-spacing: -1px;
+                &:not(.aside-menu__item) {
+                    font: 300 18px / 140% var(--ff-base);
+                    letter-spacing: -1px;
+                }
                 color: var(--grey);
 
                 @include media('tablet') {
