@@ -31,6 +31,7 @@
         }
 
         &__about {
+            max-width: 1040px;
             flex: 1;
             padding: 60px;
             border-radius: 16px;
@@ -68,7 +69,9 @@
         }
 
         ul {
-            padding-left: 20px;
+            &:not(.aside-menu__list) {
+                padding-left: 20px;
+            }
 
             li {
                 font: 300 18px / 140% var(--ff-base);
