@@ -45,6 +45,7 @@
                 font: 300 16px / 100% var(--ff-base);
                 padding: 9px 15px;
                 border-radius: 44px;
+                color: inherit;
                 border: 2px solid #dfe1e3;
                 &.active {
                     border-color: var(--accent-red);
