@@ -37,6 +37,12 @@
         }
     }
 
+    &__item {
+        @include media('tablet') {
+            min-width: max-content;
+        }
+    }
+
     &__link {
         font: 300 16px / 100% var(--ff-base);
         text-transform: uppercase;
