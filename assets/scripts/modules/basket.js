@@ -1,4 +1,4 @@
-export const basketFlow = () => {
+const basketFlow = () => {
     const totalProductsValue = document.querySelector('.js-bag-total');
 
     const basketContainer = document.querySelector('.basket-modal'),
@@ -111,3 +111,4 @@ export const basketFlow = () => {
 
     updateTotals();
 };
+export default basketFlow;

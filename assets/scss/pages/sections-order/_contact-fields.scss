@@ -1,0 +1,97 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--order {
+    .contact-box {
+        &__fields {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 24px;
+
+            @include media('mobile') {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 12px;
+                margin-bottom: 12px;
+            }
+        }
+
+        &__field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &__label {
+            font: 300 14px / 100% var(--ff-base);
+            opacity: 0.4;
+
+            @include media('mobile') {
+                font-size: 12px;
+            }
+        }
+
+        &__input {
+            padding: 11px 15px;
+            outline: none;
+            border-radius: 48px;
+            background: #f5f7f9;
+            border: 1px solid #dfe1e3;
+            @include transitions(0.3s);
+
+            &:focus {
+                border-color: var(--grey);
+            }
+
+            @include media('mobile') {
+                padding: 7px 12px;
+            }
+        }
+
+        &__check {
+            position: relative;
+            @include transitions(0.3s);
+        }
+
+        &__item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+
+            &:checked + label::before {
+                background: var(--almost-black)
+                    url('../images/icons/ico-check.svg') no-repeat center center;
+            }
+        }
+
+        &__title {
+            font: 300 16px / 100% var(--ff-base);
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            &::before {
+                content: '';
+                display: inline-flex;
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
+                border-radius: 3px;
+                background: var(--light-grey);
+
+                @include media('mobile') {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            @include media('mobile') {
+                gap: 8px;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--order {
+    padding-top: 140px;
+
+    @include media('tablet') {
+        padding-top: 100px;
+    }
+
+    @include media('mobile') {
+        padding-top: 80px;
+    }
+
+    .order {
+        &__content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+
+            @include media('tablet') {
+                flex-direction: column;
+            }
+        }
+
+        &__title {
+            margin-bottom: 24px;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 1020px;
+            width: 100%;
+            flex: 1;
+            counter-reset: count;
+
+            &-box {
+                padding: 40px;
+                border-radius: 16px;
+                background: var(--white);
+
+                @include media('tablet') {
+                    padding: 20px;
+                }
+
+                @include media('mobile') {
+                    padding: 14px;
+                }
+            }
+        }
+
+        &__subtitle {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            counter-increment: count;
+            margin-bottom: 24px;
+
+            @include media('mobile') {
+                gap: 8px;
+                margin-bottom: 18px;
+            }
+
+            &::before {
+                content: counter(count, decimal-leading-zero);
+                font: 500 16px / 100% var(--ff-base);
+                letter-spacing: -1px;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: inline-flex;
+                flex-shrink: 0;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid var(--accent-red);
+
+                @include media('mobile') {
+                    font-size: 14px;
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#D70C18">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#D70C18">
+    <link rel="icon" href="./assets/images/icons/logo.svg" type="image/svg+xml" />
+    <title>O'Nail | Order</title>
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer type="module" src="./assets/scripts/main.js"></script>
+</head>
+
+<body>
+    <header class="header-simple">
+        <div class="container">
+            <a href="#!" class="header-simple__btn">
+                <span>
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 1C4.5 1 1.5 3.946 1.5 5C1.5 6.0541 4.5 9 4.5 9" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <span>Повернутись назад</span>
+            </a>
+            <a href="/" class="header-simple__logo">
+                <img width="68" height="64" src="./assets/images/icons/logo.svg" alt="Logo">
+            </a>
+            <div class="header-simple__contact">
+                <a href="tel:+0800332741" class="header-simple__phone">0-800-332-741</a>
+                <p class="header-simple__title">
+                    Прийом дзвінків: 09:00–18:00 (окрім субот, неділь, святкових днів і новорічних свят)
+                </p>
+            </div>
+        </div>
+    </header>
+    <main class="main main--order">
+        <section class="order">
+            <div class="container">
+                <h1 class="h2 order__title">Оформити замовлення</h1>
+                <form class="order__content" id="deliveryForm">
+                    <div class="order__info">
+                        <div class="order__info-box contact-box">
+                            <h3 class="h3 order__subtitle">
+                                Контактні данні
+                            </h3>
+                            <div class="contact-box__fields">
+                                <div class="contact-box__field">
+                                    <label for="firstNameInput" class="contact-box__label">Ваше ім’я</label>
+                                    <input required class="contact-box__input" type="text" name="firstNameInput"
+                                        id="firstNameInput">
+                                </div>
+                                <div class="contact-box__field">
+                                    <label for="lastNameInput" class="contact-box__label">Ваше прізвище</label>
+                                    <input required class="contact-box__input" type="text" name="lastNameInput"
+                                        id="lastNameInput">
+                                </div>
+                                <div class="contact-box__field">
+                                    <label for="phoneInput" class="contact-box__label">Номер телефону</label>
+                                    <input required class="contact-box__input" type="tel" name="phoneInput"
+                                        id="phoneInput">
+                                </div>
+                                <div class="contact-box__field">
+                                    <label for="emailInput" class="contact-box__label">Ваш Email</label>
+                                    <input required class="contact-box__input" type="email" name="emailInput"
+                                        id="emailInput">
+                                </div>
+                            </div>
+                            <div class="contact-box__check">
+                                <input class="contact-box__item" type="checkbox" id="privacyCheck">
+                                <label class="contact-box__title" for="privacyCheck">
+                                    Використовувати данні для подальших замовлень та зареєструватись?
+                                </label>
+                            </div>
+                        </div>
+                        <div class="order__info-box delivery-box">
+                            <h3 class="h3 order__subtitle">
+                                Доставка
+                            </h3>
+                            <div class="delivery-box__fields">
+                                <div class="delivery-box__wrapper">
+                                    <div class="delivery-box__radio">
+                                        <input class="delivery-box__circ" type="radio" name="deliveryMethod" required
+                                            id="deliveryRadio_1">
+                                        <label class="delivery-box__title" for="deliveryRadio_1">
+                                            <div>
+                                                <img width="24" height="24" src="./assets/images/icons/ico-np.svg"
+                                                    alt="Icon">
+                                                <span>Поштомат "Нова Пошта"</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="delivery-box__selects">
+                                        <div class="delivery-box__grid">
+                                            <div class="select-box">
+                                                <label class="select-box__title" for="npTown_1">Місто</label>
+                                                <select class="select-box__select js-select" id="npTown_1">
+                                                    <option value="" disabled selected>
+                                                        Обери своє місто
+                                                    </option>
+                                                    <option value="LV">Львів</option>
+                                                    <option value="OD">Одеса</option>
+                                                    <option value="KI">Київ</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-box">
+                                                <label class="select-box__title" for="npPost">Поштомат</label>
+                                                <select class="select-box__select js-select" id="npPost">
+                                                    <option value="" disabled selected>
+                                                        Обери поштомат
+                                                    </option>
+                                                    <option value="Post_1">Поштомат 1</option>
+                                                    <option value="Post_2">Поштомат 2</option>
+                                                    <option value="Post_3">Поштомат 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="delivery-box__wrapper">
+                                    <div class="delivery-box__radio">
+                                        <input class="delivery-box__circ" type="radio" name="deliveryMethod"
+                                            id="deliveryRadio_2">
+                                        <label class="delivery-box__title" for="deliveryRadio_2">
+                                            <div>
+                                                <img width="24" height="24" src="./assets/images/icons/ico-np.svg"
+                                                    alt="Icon">
+                                                <span>Відділення "Нова Пошта"</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="delivery-box__selects">
+                                        <div class="delivery-box__grid">
+                                            <div class="select-box">
+                                                <label class="select-box__title" for="npTown_2">Місто</label>
+                                                <select class="select-box__select js-select" id="npTown_2">
+                                                    <option value="" disabled selected>
+                                                        Обери своє місто
+                                                    </option>
+                                                    <option value="LV">Львів</option>
+                                                    <option value="OD">Одеса</option>
+                                                    <option value="KI">Київ</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-box">
+                                                <label class="select-box__title" for="npAddress">Поштомат</label>
+                                                <select class="select-box__select js-select" id="npAddress">
+                                                    <option value="" disabled selected>
+                                                        Обери поштомат
+                                                    </option>
+                                                    <option value="Post_1">Поштомат 1</option>
+                                                    <option value="Post_2">Поштомат 2</option>
+                                                    <option value="Post_3">Поштомат 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="delivery-box__wrapper">
+                                    <div class="delivery-box__radio">
+                                        <input class="delivery-box__circ" type="radio" name="deliveryMethod"
+                                            id="deliveryRadio_3">
+                                        <label class="delivery-box__title" for="deliveryRadio_3">
+                                            <div>
+                                                <img width="24" height="24" src="./assets/images/icons/ico-np.svg"
+                                                    alt="Icon">
+                                                <span>Кур’єр "Нова Пошта"</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="delivery-box__selects">
+                                        <div class="delivery-box__grid">
+                                            <div class="select-box">
+                                                <label class="select-box__title" for="npTown_3">Місто</label>
+                                                <select class="select-box__select js-select" id="npTown_3">
+                                                    <option value="" disabled selected>
+                                                        Обери своє місто
+                                                    </option>
+                                                    <option value="LV">Львів</option>
+                                                    <option value="OD">Одеса</option>
+                                                    <option value="KI">Київ</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-box">
+                                                <label class="select-box__title" for="npCourier">Поштомат</label>
+                                                <select class="select-box__select js-select" id="npCourier">
+                                                    <option value="" disabled selected>
+                                                        Обери поштомат
+                                                    </option>
+                                                    <option value="Post_1">Поштомат 1</option>
+                                                    <option value="Post_2">Поштомат 2</option>
+                                                    <option value="Post_3">Поштомат 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="delivery-box__wrapper">
+                                    <div class="delivery-box__radio">
+                                        <input class="delivery-box__circ" type="radio" name="deliveryMethod"
+                                            id="deliveryRadio_4">
+                                        <label class="delivery-box__title" for="deliveryRadio_4">
+                                            <div>
+                                                <img width="24" height="24" src="./assets/images/icons/ico-ukr.svg"
+                                                    alt="Icon">
+                                                <span>Відділення "Укрпошта"</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="delivery-box__selects">
+                                        <div class="delivery-box__grid">
+                                            <div class="select-box">
+                                                <label class="select-box__title" for="urkTown">Місто</label>
+                                                <select class="select-box__select js-select" id="urkTown">
+                                                    <option value="" disabled selected>
+                                                        Обери своє місто
+                                                    </option>
+                                                    <option value="LV">Львів</option>
+                                                    <option value="OD">Одеса</option>
+                                                    <option value="KI">Київ</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-box">
+                                                <label class="select-box__title" for="urkAddress">Поштомат</label>
+                                                <select class="select-box__select js-select" id="urkAddress">
+                                                    <option value="" disabled selected>
+                                                        Обери поштомат
+                                                    </option>
+                                                    <option value="Post_1">Поштомат 1</option>
+                                                    <option value="Post_2">Поштомат 2</option>
+                                                    <option value="Post_3">Поштомат 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order__info-box pay-box">
+                            <h3 class="h3 order__subtitle">
+                                Оплата
+                            </h3>
+                            <div class="pay-box__fields">
+                                <div class="pay-box__wrapper">
+                                    <div class="pay-box__radio">
+                                        <input class="pay-box__circ" type="radio" name="payMethod" required
+                                            id="payRadio_1">
+                                        <label class="pay-box__title" for="payRadio_1">
+                                            <div>
+                                                <img width="68" height="24" src="./assets/images/icons/payment_1.png"
+                                                    alt="Icon">
+                                                <span>Карткою Онлайн</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="pay-box__field">
+                                        <div class="pay-box__grid">
+                                            <label class="pay-box__label" for="numberCard">
+                                                Номер картки
+                                            </label>
+                                            <input class="pay-box__input" type="tel" name="numberCard" id="numberCard"
+                                                inputmode="numeric" placeholder="0000 0000 0000 0000">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pay-box__radio">
+                                    <input class="pay-box__circ" type="radio" name="payMethod" required id="payRadio_2">
+                                    <label class="pay-box__title" for="payRadio_2">
+                                        <div>
+                                            <img width="68" height="24" src="./assets/images/icons/payment_2.png"
+                                                alt="Icon">
+                                            <span>Apple pay</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="pay-box__radio">
+                                    <input class="pay-box__circ" type="radio" name="payMethod" required id="payRadio_3">
+                                    <label class="pay-box__title" for="payRadio_3">
+                                        <div>
+                                            <img width="68" height="24" src="./assets/images/icons/payment_3.png"
+                                                alt="Icon">
+                                            <span>Google Pay</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="pay-box__radio">
+                                    <input class="pay-box__circ" type="radio" name="payMethod" required id="payRadio_4">
+                                    <label class="pay-box__title" for="payRadio_4">
+                                        <div>
+                                            <img width="68" height="24" src="./assets/images/icons/payment_4.png"
+                                                alt="Icon">
+                                            <span>LIQPAY</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="pay-box__radio">
+                                    <input class="pay-box__circ" type="radio" name="payMethod" required id="payRadio_5">
+                                    <label class="pay-box__title" for="payRadio_5">
+                                        <div>
+                                            <img width="68" height="24" src="./assets/images/icons/payment_5.png"
+                                                alt="Icon">
+                                            <span>WayForPay</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="pay-box__checkboxes">
+                                <div class="checkbox">
+                                    <input class="checkbox__item" type="checkbox" id="phonesCheck">
+                                    <label class="checkbox__title" for="phonesCheck">
+                                        Зателефонувати мені для підтвердження
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input class="checkbox__item" type="checkbox" id="messageCheck">
+                                    <label class="checkbox__title" for="messageCheck">
+                                        Залишити коментар до замовлення
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="pay-box__message">
+                                <textarea class="message-item" maxlength="300" name="orderMessage" id="orderMessage"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order__item">
+                        <h3 class="h4 order__item-title item-box">
+                            Ваше замовлення
+                        </h3>
+                        <div class="order__item-product item-box">
+                            <div class="col">
+                                <div class="order__item-thumb">
+                                    <img width="112" height="112" src="./assets/images/order_pic.png" alt="Picture">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <p class="order__item-subtitle">
+                                    Лампа O Nail з технологіями ШІ
+                                </p>
+                                <span class="order__item-price">
+                                    18 800 грн
+                                </span>
+                            </div>
+                        </div>
+                        <div class="order__item-info item-box">
+                            <div class="row">
+                                <p class="order__item-desc">Підсумок:</p>
+                                <span class="order__item-sum">18 800 грн</span>
+                            </div>
+                            <div class="row">
+                                <p class="order__item-desc">Доставка:</p>
+                                <span class="order__item-sum">80 грн</span>
+                            </div>
+                        </div>
+                        <div class="order__item-promo item-box">
+                            <div class="promo-check">
+                                <input class="promo-check__box" type="checkbox" id="promoCheck">
+                                <label class="promo-check__label" for="promoCheck">
+                                    Використати промокод
+                                </label>
+                            </div>
+                            <div class="promo-code">
+                                <div class="promo-code__wrapper">
+                                    <input class="promo-code__field" type="text" id="promoCode"
+                                        placeholder="Введіть ваш промокод">
+                                    <button class="promo-code__btn" type="button">
+                                        Застосувати
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order__item-total item-box">
+                            <div class="row">
+                                <p class="order__item-desc">Разом:</p>
+                                <span class="order__item-sum">18 880 грн</span>
+                            </div>
+                            <button type="submit" class="order__item-submit">
+                                Оформити замовлення
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

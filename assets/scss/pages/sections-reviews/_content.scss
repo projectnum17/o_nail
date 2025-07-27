@@ -13,10 +13,34 @@
             padding-bottom: 40px;
         }
 
-        &__title {
+        &__head {
             margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1040px;
             @include media('mobile') {
+                flex-wrap: wrap;
                 margin-bottom: 20px;
+            }
+        }
+
+        &__button {
+            font: 300 16px / 100% var(--ff-base);
+            text-transform: uppercase;
+            padding: 15px 27px;
+            border-radius: 60px;
+            border: 1px solid var(--accent-red);
+            @include transitions(0.3s);
+            @include hover {
+                background: var(--accent-red);
+                color: var(--white);
+            }
+
+            @include media('mobile') {
+                padding: 12px 20px;
+                font-size: 14px;
             }
         }
 

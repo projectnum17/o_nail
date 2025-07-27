@@ -6,16 +6,18 @@ import form from './modules/form.js';
 import reviews from './modules/reviews.js';
 import asideMenu from './modules/asideMenu.js';
 import activityCollection from './modules/activityCollection.js';
-import { basketFlow as basket } from './modules/basket.js';
+import orderFlow from './modules/orderFlow.js';
+import basketFlow from './modules/basket.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerFlow();
-    basket();
+    basketFlow();
     asideMenu();
     modals();
     toggleClass('.js-submenu', 'submenu');
     form();
     reviews();
+    orderFlow();
     activityCollection('.faq-box', 'is-open');
     activityCollection('.js-filter', 'active');
 });
