@@ -95,6 +95,7 @@
             background: transparent;
             border-radius: 60px;
             border: 1px solid var(--accent-red);
+            color: inherit;
             @include transitions(0.3s);
             @include hover {
                 background: var(--accent-red);

@@ -70,7 +70,7 @@ const locationFlow = () => {
         const storesData = document.querySelector('#stores-data');
         const mapContainer = document.querySelector('#map');
 
-        if (!storesData || !mapContainer) return; // если элементов нет — выходим
+        if (!storesData || !mapContainer) return;
 
         const getStoresFromDOM = () => {
             const elements = storesData.querySelectorAll('div');
@@ -96,7 +96,7 @@ const locationFlow = () => {
 
         const stores = getStoresFromDOM();
 
-        if (stores.length === 0) return; // если магазинов нет — выходим
+        if (stores.length === 0) return; 
 
         const isMobile = window.innerWidth < 768;
 
@@ -124,7 +124,7 @@ const locationFlow = () => {
         ).addTo(map);
 
         const customIcon = L.icon({
-            iconUrl: '/assets/images/icons/ico-marker.svg',
+            iconUrl: './assets/images/icons/ico-marker.svg',
             iconSize: iconSize,
             iconAnchor: iconAnchor,
         });

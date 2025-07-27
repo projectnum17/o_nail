@@ -34,6 +34,7 @@
                 padding: 9px 15px;
                 border-radius: 44px;
                 border: 2px solid #dfe1e3;
+                color: inherit;
                 &.active {
                     border-color: var(--accent-red);
 
@@ -161,6 +162,7 @@
                 border-radius: 28px;
                 align-items: center;
                 gap: 8px;
+                color: inherit;
                 border: 2px solid var(--accent-red);
                 background: var(--white);
 
