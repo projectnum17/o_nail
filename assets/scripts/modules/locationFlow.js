@@ -67,8 +67,13 @@ const locationFlow = () => {
     };
 
     const mapFlow = () => {
+        const storesData = document.querySelector('#stores-data');
+        const mapContainer = document.querySelector('#map');
+
+        if (!storesData || !mapContainer) return; // если элементов нет — выходим
+
         const getStoresFromDOM = () => {
-            const elements = document.querySelectorAll('#stores-data > div');
+            const elements = storesData.querySelectorAll('div');
             const stores = [];
 
             elements.forEach((el) => {
@@ -91,6 +96,14 @@ const locationFlow = () => {
 
         const stores = getStoresFromDOM();
 
+        if (stores.length === 0) return; // если магазинов нет — выходим
+
+        const isMobile = window.innerWidth < 768;
+
+        const mapZoom = isMobile ? 3 : 5;
+        const iconSize = isMobile ? [24, 24] : [32, 32];
+        const iconAnchor = isMobile ? [12, 24] : [16, 32];
+
         const map = L.map('map', {
             dragging: false,
             scrollWheelZoom: false,
@@ -100,12 +113,6 @@ const locationFlow = () => {
             touchZoom: false,
             zoomControl: false,
         }).setView([49.8419, 24.0315], 10);
-
-        const isMobile = window.innerWidth < 768;
-
-        const mapZoom = isMobile ? 3 : 5;
-        const iconSize = isMobile ? [24, 24] : [32, 32];
-        const iconAnchor = isMobile ? [12, 24] : [16, 32];
 
         L.tileLayer(
             'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
@@ -151,74 +158,84 @@ const locationFlow = () => {
 
         renderMarkers('all');
 
-        document.querySelectorAll('.js-location').forEach((btn) => {
-            btn.addEventListener('click', () => {
-                document
-                    .querySelectorAll('.js-location')
-                    .forEach((b) => b.classList.remove('active'));
-                btn.classList.add('active');
+        const locationButtons = document.querySelectorAll('.js-location');
+        if (locationButtons.length) {
+            locationButtons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    locationButtons.forEach((b) =>
+                        b.classList.remove('active')
+                    );
+                    btn.classList.add('active');
 
-                const city = btn.dataset.city;
-                renderMarkers(city);
+                    const city = btn.dataset.city;
+                    renderMarkers(city);
+                });
             });
-        });
+        }
 
-        document.querySelector('.js-nearest').addEventListener('click', () => {
-            if (!navigator.geolocation) {
-                alert('Geolocation is not supported by your browser.');
-                return;
-            }
+        const nearestBtn = document.querySelector('.js-nearest');
+        if (nearestBtn) {
+            nearestBtn.addEventListener('click', () => {
+                if (!navigator.geolocation) {
+                    alert('Geolocation is not supported by your browser.');
+                    return;
+                }
 
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const userLat = position.coords.latitude;
-                    const userLon = position.coords.longitude;
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const userLat = position.coords.latitude;
+                        const userLon = position.coords.longitude;
 
-                    let nearest = null;
-                    let minDistance = Infinity;
+                        let nearest = null;
+                        let minDistance = Infinity;
 
-                    stores.forEach((store) => {
-                        const [lat, lon] = store.coords;
-                        const distance = Math.sqrt(
-                            (lat - userLat) ** 2 + (lon - userLon) ** 2
-                        );
-                        if (distance < minDistance) {
-                            minDistance = distance;
-                            nearest = store;
+                        stores.forEach((store) => {
+                            const [lat, lon] = store.coords;
+                            const distance = Math.sqrt(
+                                (lat - userLat) ** 2 + (lon - userLon) ** 2
+                            );
+                            if (distance < minDistance) {
+                                minDistance = distance;
+                                nearest = store;
+                            }
+                        });
+
+                        if (nearest) {
+                            map.setView(nearest.coords, 14);
+
+                            const nearestMarker = L.marker(nearest.coords, {
+                                icon: customIcon,
+                            }).addTo(map);
+                            markers.push(nearestMarker);
+
+                            L.popup()
+                                .setLatLng(nearest.coords)
+                                .setContent(`${nearest.name}`)
+                                .openOn(map);
                         }
-                    });
-
-                    if (nearest) {
-                        map.setView(nearest.coords, 14);
-                        L.popup()
-                            .setLatLng(nearest.coords)
-                            .setContent(`${nearest.name}`)
-                            .openOn(map);
-                    }
-                },
-                (error) => {
-                    switch (error.code) {
-                        case error.PERMISSION_DENIED:
-                            alert(
-                                'Будь ласка, дозвольте доступ до геолокації.'
-                            );
-                            break;
-                        case error.POSITION_UNAVAILABLE:
-                            alert('Please allow access to geolocation.');
-                            break;
-                        case error.TIMEOUT:
-                            alert('The geolocation timeout has expired.');
-                            break;
-                        default:
-                            alert(
-                                'An unknown error occurred while determining geolocation.'
-                            );
-                            break;
-                    }
-                },
-                { timeout: 5000 }
-            );
-        });
+                    },
+                    (error) => {
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                alert(
+                                    'Будь ласка, дозвольте доступ до геолокації.'
+                                );
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                alert('Location unavailable.');
+                                break;
+                            case error.TIMEOUT:
+                                alert('The geolocation timeout has expired.');
+                                break;
+                            default:
+                                alert('An unknown geolocation error occurred.');
+                                break;
+                        }
+                    },
+                    { timeout: 5000 }
+                );
+            });
+        }
     };
 
     filterFlow();
