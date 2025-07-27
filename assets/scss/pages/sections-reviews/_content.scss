@@ -29,6 +29,7 @@
         &__button {
             font: 300 16px / 100% var(--ff-base);
             text-transform: uppercase;
+            color: inherit;
             padding: 15px 27px;
             border-radius: 60px;
             border: 1px solid var(--accent-red);
@@ -66,6 +67,7 @@
         &__reviews {
             &-more {
                 font: 300 16px / 100% var(--ff-base);
+                color: inherit;
                 padding: 16px 28px;
                 text-transform: uppercase;
                 border-radius: 60px;
@@ -117,6 +119,7 @@
                 font: 400 14px / 100% var(--ff-base);
                 text-transform: uppercase;
                 position: relative;
+                color: inherit;
 
                 @include media('mobile') {
                     padding: 7px 20px;
