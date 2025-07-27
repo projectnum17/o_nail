@@ -303,7 +303,7 @@
         &-ico {
             display: inline-flex;
             flex-shrink: 0;
-            min-width: 24px;
+            width: 24px;
             height: 24px;
             position: relative;
 
@@ -313,6 +313,10 @@
             }
 
             &:first-child {
+                width: 44px;
+                @include media('mobile') {
+                    width: 20px;
+                }
                 padding-right: 20px;
 
                 &::before {
