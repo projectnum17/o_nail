@@ -1,13 +1,14 @@
 'use strict';
+import modals from './modules/modals.js';
+import basketFlow from './modules/basket.js';
 import toggleClass from './modules/toggleClass.js';
 import headerFlow from './modules/headerFlow.js';
-import modals from './modules/modals.js';
 import form from './modules/form.js';
 import reviews from './modules/reviews.js';
 import asideMenu from './modules/asideMenu.js';
 import activityCollection from './modules/activityCollection.js';
 import orderFlow from './modules/orderFlow.js';
-import basketFlow from './modules/basket.js';
+import locationFlow from './modules/locationFlow.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerFlow();
@@ -20,4 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
     orderFlow();
     activityCollection('.faq-box', 'is-open');
     activityCollection('.js-filter', 'active');
+    locationFlow();
 });

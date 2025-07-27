@@ -48,6 +48,9 @@
                 border: 2px solid #dfe1e3;
                 &.active {
                     border-color: var(--accent-red);
+                    @include hover {
+                        border-color: var(--accent-red);
+                    }
                 }
                 @include transitions(0.3s);
                 @include hover {
