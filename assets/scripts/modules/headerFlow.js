@@ -5,7 +5,6 @@ const headerFlow = () => {
     const menuItem = document.querySelector('.js-menu');
     const mobileSubmenu = document.querySelector('.js-mobile-submenu');
 
-    // если обязательные элементы отсутствуют — сразу выходим
     if (!parent || !headerLogo || !logoTarget || !menuItem) return;
 
     const originalParent = headerLogo.parentElement;
@@ -69,7 +68,6 @@ const headerFlow = () => {
         }
     };
 
-    // submenu toggle
     if (mobileSubmenu) {
         mobileSubmenu.addEventListener('click', () => {
             mobileSubmenu.classList.toggle('show');

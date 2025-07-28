@@ -9,6 +9,7 @@ import asideMenu from './modules/asideMenu.js';
 import activityCollection from './modules/activityCollection.js';
 import orderFlow from './modules/orderFlow.js';
 import locationFlow from './modules/locationFlow.js';
+import cabinetFlow from './modules/cabinetFlow.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerFlow();
@@ -21,5 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     orderFlow();
     activityCollection('.faq-box', 'is-open');
     activityCollection('.js-filter', 'active');
+    activityCollection('.js-order-box', 'shown');
     locationFlow();
+    cabinetFlow();
 });

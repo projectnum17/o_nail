@@ -1,6 +1,5 @@
 const asideMenu = () => {
     const scrollCurrentMenuItemIntoCenter = () => {
-        // Только на экранах меньше 992px
         if (window.innerWidth >= 992) return;
 
         const menuList = document.querySelector('.aside-menu__list');
