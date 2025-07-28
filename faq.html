@@ -236,9 +236,20 @@
     <div class="mobile-menu js-menu">
         <div class="mobile-menu__content">
             <div class="mobile-menu__row">
-                <a href="javascript: void(0)" class="mobile-menu__acount">
-                    <img src="./assets/images/icons/ico-human.svg" alt="Icon">
-                </a>
+                <div class="mobile-menu__inner">
+                    <a href="javascript: void(0)" class="mobile-menu__acount">
+                        <img src="./assets/images/icons/ico-human.svg" alt="Icon">
+                    </a>
+                    <a href="javascript: void(0)" class="mobile-menu__user">
+                        <span>B</span>
+                    </a>
+                </div>
+                <!-- remove toggle class  for frontend only -->
+                <script>
+                    document.querySelector('.mobile-menu__inner').addEventListener('click', function () {
+                        this.classList.toggle('user')
+                    })
+                </script>
                 <nav class="mobile-menu__nav">
                     <ul class="mobile-menu__list">
                         <li class="mobile-menu__item">
@@ -427,9 +438,20 @@
                     </div>
                 </div>
                 <div class="header__info">
-                    <a href="javascript: void(0)" class="header__info-ico header__info--cabinet">
-                        <img src="./assets/images/icons/ico-human.svg" alt="Icon">
-                    </a>
+                    <div class="header__user">
+                        <a href="javascript: void(0)" class="header__info-ico header__info--cabinet">
+                            <img src="./assets/images/icons/ico-human.svg" alt="Icon">
+                        </a>
+                        <a href="javascript: void(0)" class="header__info-ico header__info--user">
+                            <span>B</span>
+                        </a>
+                    </div>
+                    <script>
+                        const wrapperUser = document.querySelector('.header__user')
+                        wrapperUser.addEventListener('click', () => {
+                            wrapperUser.classList.toggle('user')
+                        })
+                    </script>
                     <a href="javascript: void(0)" class="header__info-ico header__info--bag js-basket-open">
                         <lottie-player src="./assets/animation/bag.json" direction="1" mode="normal" loop
                             autoplay></lottie-player>
@@ -500,7 +522,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -510,7 +534,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -520,7 +546,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -530,7 +558,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -540,7 +570,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -550,7 +582,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -560,7 +594,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -570,7 +606,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -580,7 +618,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -590,7 +630,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -600,7 +642,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>
@@ -610,7 +654,9 @@
                             </h4>
                             <div class="faq-box__text">
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam numquam animi qui quo nam quas fuga pariatur, molestias neque!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet dolorem
+                                    maxime consequuntur. Excepturi voluptatum iusto, labore praesentium ab aliquam
+                                    numquam animi qui quo nam quas fuga pariatur, molestias neque!
                                 </p>
                             </div>
                         </div>

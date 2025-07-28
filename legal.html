@@ -236,9 +236,20 @@
     <div class="mobile-menu js-menu">
         <div class="mobile-menu__content">
             <div class="mobile-menu__row">
-                <a href="javascript: void(0)" class="mobile-menu__acount">
-                    <img src="./assets/images/icons/ico-human.svg" alt="Icon">
-                </a>
+                <div class="mobile-menu__inner">
+                    <a href="javascript: void(0)" class="mobile-menu__acount">
+                        <img src="./assets/images/icons/ico-human.svg" alt="Icon">
+                    </a>
+                    <a href="javascript: void(0)" class="mobile-menu__user">
+                        <span>B</span>
+                    </a>
+                </div>
+                <!-- remove toggle class  for frontend only -->
+                <script>
+                    document.querySelector('.mobile-menu__inner').addEventListener('click', function () {
+                        this.classList.toggle('user')
+                    })
+                </script>
                 <nav class="mobile-menu__nav">
                     <ul class="mobile-menu__list">
                         <li class="mobile-menu__item">
@@ -427,9 +438,20 @@
                     </div>
                 </div>
                 <div class="header__info">
-                    <a href="javascript: void(0)" class="header__info-ico header__info--cabinet">
-                        <img src="./assets/images/icons/ico-human.svg" alt="Icon">
-                    </a>
+                    <div class="header__user">
+                        <a href="javascript: void(0)" class="header__info-ico header__info--cabinet">
+                            <img src="./assets/images/icons/ico-human.svg" alt="Icon">
+                        </a>
+                        <a href="javascript: void(0)" class="header__info-ico header__info--user">
+                            <span>B</span>
+                        </a>
+                    </div>
+                    <script>
+                        const wrapperUser = document.querySelector('.header__user')
+                        wrapperUser.addEventListener('click', () => {
+                            wrapperUser.classList.toggle('user')
+                        })
+                    </script>
                     <a href="javascript: void(0)" class="header__info-ico header__info--bag js-basket-open">
                         <lottie-player src="./assets/animation/bag.json" direction="1" mode="normal" loop
                             autoplay></lottie-player>
@@ -475,29 +497,45 @@
                             Lorem ipsum dolor sit amet
                         </h2>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, similique unde at possimus facilis nihil! Consectetur ipsa, alias error sunt maxime debitis perferendis reprehenderit quisquam quas commodi, provident neque odit.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, similique unde at possimus
+                            facilis nihil! Consectetur ipsa, alias error sunt maxime debitis perferendis reprehenderit
+                            quisquam quas commodi, provident neque odit.
                         </p>
                         <h3>
                             Lorem ipsum dolor sit amet
                         </h3>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quod tempora amet, odit temporibus voluptatem? Eos commodi, blanditiis quod, necessitatibus eligendi eveniet quo quia, doloribus quisquam nesciunt atque ipsum aliquid!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quod tempora amet, odit
+                            temporibus voluptatem? Eos commodi, blanditiis quod, necessitatibus eligendi eveniet quo
+                            quia, doloribus quisquam nesciunt atque ipsum aliquid!
                         </p>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptatum possimus corrupti distinctio doloremque molestias provident fuga quod ullam quaerat cum nulla aut cupiditate nihil est, id quas saepe.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptatum
+                            possimus corrupti distinctio doloremque molestias provident fuga quod ullam quaerat cum
+                            nulla aut cupiditate nihil est, id quas saepe.
                         </p>
                         <h4>
                             Lorem ipsum dolor sit amet
                         </h4>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate error laboriosam quidem, laborum, sed excepturi reprehenderit doloremque corrupti architecto modi atque magni ut labore neque ipsam deserunt nesciunt eaque tenetur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo inventore cupiditate repellat ut, amet eligendi odit porro voluptate saepe aperiam at quo dolor asperiores adipisci nesciunt tempore! Beatae, natus repellendus.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate error laboriosam
+                            quidem, laborum, sed excepturi reprehenderit doloremque corrupti architecto modi atque magni
+                            ut labore neque ipsam deserunt nesciunt eaque tenetur?Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Illo inventore cupiditate repellat ut, amet eligendi odit porro voluptate
+                            saepe aperiam at quo dolor asperiores adipisci nesciunt tempore! Beatae, natus repellendus.
                         </p>
                         <h2>Lorem ipsum dolor sit amet</h2>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, expedita illo? Aperiam nostrum placeat vero sunt. Corrupti nihil tenetur delectus exercitationem explicabo culpa. Pariatur ipsum adipisci distinctio esse dignissimos fugit.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, expedita illo? Aperiam
+                            nostrum placeat vero sunt. Corrupti nihil tenetur delectus exercitationem explicabo culpa.
+                            Pariatur ipsum adipisci distinctio esse dignissimos fugit.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat nostrum dolore, voluptatem odit praesentium fugiat quis deserunt, sequi impedit ea optio iste facilis itaque animi. Perspiciatis inventore dolorum ex ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iste magni neque culpa vitae doloribus commodi eaque sed in aliquam molestiae velit veritatis aperiam, aliquid quibusdam. Distinctio omnis quam expedita?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat nostrum dolore, voluptatem
+                            odit praesentium fugiat quis deserunt, sequi impedit ea optio iste facilis itaque animi.
+                            Perspiciatis inventore dolorum ex ut?Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Inventore iste magni neque culpa vitae doloribus commodi eaque sed in aliquam
+                            molestiae velit veritatis aperiam, aliquid quibusdam. Distinctio omnis quam expedita?
                         </p>
                     </div>
                     <nav class="aside-menu">

@@ -10,7 +10,7 @@
     opacity: 0;
     visibility: hidden;
     background: var(--white);
-    @include transitions(.3s);
+    @include transitions(0.3s);
 
     &.show {
         opacity: 1;
@@ -31,6 +31,36 @@
 
         &::-webkit-scrollbar {
             display: none;
+        }
+    }
+
+    &__inner {
+        &.user {
+            a {
+                &:first-child {
+                    display: none;
+                }
+
+                &:last-child {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &__user {
+        font: 500 26px / 100% var(--ff-base);
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(215, 12, 24, 0.1);
+        color: var(--accent-red);
+        @include media('mobile') {
+            width: 40px;
+            height: 40px;
         }
     }
 
