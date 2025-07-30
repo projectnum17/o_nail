@@ -30,9 +30,6 @@
         padding-inline: 12px;
         max-width: 1330px;
         width: 100%;
-        @include media('mobile') {
-            height: 95%;
-        }
     }
 
     &__wrapper {
