@@ -10,6 +10,9 @@ import activityCollection from './modules/activityCollection.js';
 import orderFlow from './modules/orderFlow.js';
 import locationFlow from './modules/locationFlow.js';
 import cabinetFlow from './modules/cabinetFlow.js';
+import productPage from './modules/productPage.js';
+import quickOrder from './modules/quickOrder.js';
+import contactModal from './modules/contactModal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerFlow();
@@ -23,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     activityCollection('.faq-box', 'is-open');
     activityCollection('.js-filter', 'active');
     activityCollection('.js-order-box', 'shown');
+    productPage();
     locationFlow();
     cabinetFlow();
+    quickOrder();
+    contactModal();
 });

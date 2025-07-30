@@ -68,10 +68,10 @@ a {
         (100% - var(--container-width)) / 2 + var(--container-padding)
     );
 }
-
-section {
+section,
+.scrl-mt {
+    scroll-margin-top: 150px;
     @include media('mobile') {
-        scroll-margin-top: 56px;
     }
 }
 

@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#D70C18">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#D70C18">
+    <link rel="icon" href="./assets/images/icons/logo.svg" type="image/svg+xml" />
+    <title>O'Nail | Product</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer type="module" src="./assets/scripts/main.js"></script>
+</head>
+
+<body>
+    <div class="catalog-modal js-catalog">
+        <div class="catalog-modal__content js-catalog-wrapp">
+            <div class="catalog-modal__head">
+                <button class="catalog-modal__close js-catalog-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#D70C18" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <h3 class="h3 catalog-modal__title">
+                    Продукти <span>ONAIL</span>
+                </h3>
+            </div>
+            <div class="catalog-modal__cards">
+                <div class="product-box">
+                    <div class="product-box__img">
+                        <img loading="lazy" width="220" height="202" src="./assets/images/catalog_1.png" alt="Product">
+                    </div>
+                    <div class="product-box__info">
+                        <p class="product-box__title">Лампа O Nail з технологіями ШІ</p>
+                        <a href="javascript: void(0)" class="product-box__link">
+                            <span>детальніше</span>
+                            <span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 1C1.5 1 4.5 3.946 4.5 5C4.5 6.0541 1.5 9 1.5 9" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="product-box__img">
+                        <img loading="lazy" width="220" height="202" src="./assets/images/catalog_2.png" alt="Product">
+                    </div>
+                    <div class="product-box__info">
+                        <p class="product-box__title">Бездротовий пульт керування</p>
+                        <a href="javascript: void(0)" class="product-box__link">
+                            <span>детальніше</span>
+                            <span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 1C1.5 1 4.5 3.946 4.5 5C4.5 6.0541 1.5 9 1.5 9" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="product-box__img">
+                        <img loading="lazy" width="220" height="202" src="./assets/images/catalog_3.png" alt="Product">
+                    </div>
+                    <div class="product-box__info">
+                        <p class="product-box__title">Змінні батареї та зарядна станція</p>
+                        <a href="javascript: void(0)" class="product-box__link">
+                            <span>детальніше</span>
+                            <span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 1C1.5 1 4.5 3.946 4.5 5C4.5 6.0541 1.5 9 1.5 9" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="basket-modal js-basket">
+        <div class="basket-modal__content js-basket-wrapp">
+            <div class="basket-modal__head">
+                <button class="basket-modal__close js-basket-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#D70C18" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <h3 class="h3 basket-modal__title">
+                    Кошик
+                </h3>
+            </div>
+            <div class="basket-modal__buy">
+                <p class="basket-empty h4">
+                    Порожній кошик
+                </p>
+                <div class="basket-modal__products">
+                    <div class="product js-product">
+                        <button class="product__trash js-product-bin">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5"
+                                    stroke="#141B34" stroke-width="1.5" stroke-linecap="round" />
+                                <path
+                                    d="M3 5.5H21M16.0557 5.5L15.3731 4.09173C14.9196 3.15626 14.6928 2.68852 14.3017 2.39681C14.215 2.3321 14.1231 2.27454 14.027 2.2247C13.5939 2 13.0741 2 12.0345 2C10.9688 2 10.436 2 9.99568 2.23412C9.8981 2.28601 9.80498 2.3459 9.71729 2.41317C9.32164 2.7167 9.10063 3.20155 8.65861 4.17126L8.05292 5.5"
+                                    stroke="#141B34" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M9.5 16.5V10.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M14.5 16.5V10.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                        <div class="product__info">
+                            <div class="product__img">
+                                <img loading="lazy" width="148" height="136" src="./assets/images/catalog_1.png"
+                                    alt="Product">
+                            </div>
+                            <div class="product__about">
+                                <p class="product__title">
+                                    Лампа O Nail з технологіями ШІ
+                                </p>
+                                <div>
+                                    <span data-price="18800" class="product__price">18 800 грн</span>
+                                    <div class="product__count">
+                                        <button class="product__count-dec js-product-dec">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19.002 12.002H5" stroke="#191919" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M19.002 12.002H5" stroke="black" stroke-opacity="0.2"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <span class="product__count-val js-product-val">1</span>
+                                        <button class="product__count-inc js-product-inc">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.001 5V19.002" stroke="#191919" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M12.001 5V19.002" stroke="black" stroke-opacity="0.2"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M19.002 12.002H5" stroke="#191919" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M19.002 12.002H5" stroke="black" stroke-opacity="0.2"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product js-product">
+                        <button class="product__trash js-product-bin">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5"
+                                    stroke="#141B34" stroke-width="1.5" stroke-linecap="round" />
+                                <path
+                                    d="M3 5.5H21M16.0557 5.5L15.3731 4.09173C14.9196 3.15626 14.6928 2.68852 14.3017 2.39681C14.215 2.3321 14.1231 2.27454 14.027 2.2247C13.5939 2 13.0741 2 12.0345 2C10.9688 2 10.436 2 9.99568 2.23412C9.8981 2.28601 9.80498 2.3459 9.71729 2.41317C9.32164 2.7167 9.10063 3.20155 8.65861 4.17126L8.05292 5.5"
+                                    stroke="#141B34" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M9.5 16.5V10.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M14.5 16.5V10.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                        <div class="product__info">
+                            <div class="product__img">
+                                <img loading="lazy" width="148" height="136" src="./assets/images/catalog_1.png"
+                                    alt="Product">
+                            </div>
+                            <div class="product__about">
+                                <p class="product__title">
+                                    Лампа O Nail з технологіями ШІ
+                                </p>
+                                <div>
+                                    <span data-price="18800" class="product__price">18 800 грн</span>
+                                    <div class="product__count">
+                                        <button class="product__count-dec js-product-dec">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19.002 12.002H5" stroke="#191919" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M19.002 12.002H5" stroke="black" stroke-opacity="0.2"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <span class="product__count-val js-product-val">1</span>
+                                        <button class="product__count-inc js-product-inc">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.001 5V19.002" stroke="#191919" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M12.001 5V19.002" stroke="black" stroke-opacity="0.2"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M19.002 12.002H5" stroke="#191919" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M19.002 12.002H5" stroke="black" stroke-opacity="0.2"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-modal__order">
+                    <div class="basket-modal__value">
+                        <span class="basket-modal__total">
+                            <span id="totalProduct">3</span>
+                            <span class="total-word" data-count="one">товар</span>
+                            <span class="total-word" data-count="few">товари</span>
+                            <span class="total-word" data-count="many">товарів</span>
+                            на суму
+                        </span>
+                        <span class="basket-modal__sum">
+                            <span id="totalSum">18 800</span> грн
+                        </span>
+                    </div>
+                    <a href="javascript: void(0)" class="basket-modal__cta js-purchase">
+                        Оформити замовлення
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quick-modal js-quick-form">
+        <form class="form-box">
+            <button class="form-box__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#D70C18" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h2 class="h2 form-box__title">Швидка покупка</h2>
+            <p class="form-box__text">
+                Для швидкого придбання введіть свій номер телефону
+            </p>
+            <div class="form-box__fields">
+                <div class="form-box__field">
+                    <label for="quickFormName" class="form-box__label">Ваше Ім’я</label>
+                    <input class="form-box__input" required type="text" name="quickFormName" id="quickFormName">
+                </div>
+                <div class="form-box__field">
+                    <label for="quickFormPhone" class="form-box__label">
+                        Ваш номер телефону
+                    </label>
+                    <input class="form-box__input" required type="tel" name="quickFormPhone" id="quickFormPhone">
+                </div>
+                <button type="submit" class="form-box__submit">
+                    надіслати запит
+                </button>
+            </div>
+        </form>
+        <div class="success-box">
+            <button class="success-box__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#D70C18" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h2 class="h2 success-box__title">
+                Дякуємо за довіру
+            </h2>
+            <p class="success-box__text">
+                Наш менеджер зв’яжеться з вами найближчим часом для уточнення всіх деталей
+            </p>
+            <a href="/" class="success-box__link">
+                повернутись на головну
+            </a>
+        </div>
+    </div>
+    <div class="contact-modal js-contact-modal">
+        <div class="contact-modal__inner">
+            <div class="contact-modal__wrapper">
+                <button class="contact-modal__close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#D70C18" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="contact-modal__img">
+                    <img loading="lazy" src="./assets/images/contact-modal.jpg" alt="Thumbnail">
+                </div>
+                <div class="contact-modal__content">
+                    <h2 class="h2 contact-modal__title">
+                        Заповніть форму
+                    </h2>
+                    <p class="contact-modal__text">
+                        Наші менеджери зв’яжуться з вами як найшвидше.
+                    </p>
+                    <form class="contact-modal__form">
+                        <div class="contact-modal__fields">
+                            <div class="contact-modal__field">
+                                <label for="contactModalName" class="contact-modal__label">
+                                    Ваше Ім’я
+                                </label>
+                                <input required name="contactModalName" id="contactModalName" type="text"
+                                    class="contact-modal__input">
+                            </div>
+                            <div class="contact-modal__field">
+                                <label for="contactModalSurname" class="contact-modal__label">
+                                    Прізвище
+                                </label>
+                                <input required name="contactModalSurname" id="contactModalSurname" type="text"
+                                    class="contact-modal__input">
+                            </div>
+                            <div class="contact-modal__field">
+                                <label for="contactModalPhone" class="contact-modal__label">
+                                    Номер телефону
+                                </label>
+                                <input required name="contactModalPhone" id="contactModalPhone" type="tel"
+                                    class="contact-modal__input">
+                            </div>
+                            <div class="contact-modal__field">
+                                <label for="contactModalMail" class="contact-modal__label">
+                                    Email
+                                </label>
+                                <input required name="contactModalMail" id="contactModalMail" type="email"
+                                    class="contact-modal__input">
+                            </div>
+                        </div>
+                        <button type="submit" class="contact-modal__submit">
+                            надіслати запит
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="contact-modal__success">
+                <button class="contact-modal__success-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#D70C18" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <h2 class="h2 contact-modal__success-title">
+                    Дякуємо за довіру
+                </h2>
+                <p class="contact-modal__success-text">
+                    Наш менеджер зв’яжеться з вами найближчим часом для уточнення всіх деталей
+                </p>
+                <a href="/" class="contact-modal__success-link">
+                    повернутись на головну
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu js-menu">
+        <div class="mobile-menu__content">
+            <div class="mobile-menu__row">
+                <div class="mobile-menu__inner">
+                    <a href="javascript: void(0)" class="mobile-menu__acount">
+                        <img src="./assets/images/icons/ico-human.svg" alt="Icon">
+                    </a>
+                    <a href="javascript: void(0)" class="mobile-menu__user">
+                        <span>B</span>
+                    </a>
+                </div>
+                <!-- remove toggle class  for frontend only -->
+                <script>
+                    document.querySelector('.mobile-menu__inner').addEventListener('click', function () {
+                        this.classList.toggle('user')
+                    })
+                </script>
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item">
+                            <a href="javascript: void(0)">про бренд</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="javascript: void(0)">відгуки</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="javascript: void(0)">де купити?</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="javascript: void(0)" class="js-mobile-submenu">
+                                <span>клієнтам та партнерам</span>
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <div class="mobile-menu__wrapper">
+                                <ul class="mobile-menu__submenu">
+                                    <li>
+                                        <a href="javascript: void(0)">Новини</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">Доставка та оплата</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">Обмін та повернення</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">Відгуки</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">Партнери</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">Контакти</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mobile-menu__row">
+                <button class="mobile-menu__cta js-catalog-open">
+                    <span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 7H22" stroke="#191919" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M2 7H22" stroke="black" stroke-opacity="0.2" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2 12H22" stroke="#191919" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M2 12H22" stroke="black" stroke-opacity="0.2" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2 17H22" stroke="#191919" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M2 17H22" stroke="black" stroke-opacity="0.2" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <span>продукти onail</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header__block">
+                <button class="header__cta js-catalog-open">
+                    <span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 7H22" stroke="#191919" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 7H22" stroke="black" stroke-opacity="0.2" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 12H22" stroke="#191919" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 12H22" stroke="black" stroke-opacity="0.2" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 17H22" stroke="#191919" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 17H22" stroke="black" stroke-opacity="0.2" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span>продукти onail</span>
+                </button>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list-item">
+                            <a href="about.html" class="header__list-link">
+                                про бренд
+                            </a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="reviews.html" class="header__list-link">
+                                відгуки
+                            </a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="where.html" class="header__list-link">
+                                де купити?
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="/" class="header__logo">
+                    <img width="68" height="64" src="./assets/images/icons/logo.svg" alt="Logo">
+                </a>
+                <div class="header__btn header__btn--clients js-submenu">
+                    <div class="header__btn-item">
+                        <span>
+                            клієнтам та партнерам
+                        </span>
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#141B34"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="header__btn-box">
+                        <ul class="header__btn-list">
+                            <li class="header__btn-item">
+                                <a href="javascript: void(0)">Новини</a>
+                            </li>
+                            <li class="header__btn-item">
+                                <a href="javascript: void(0)">Доставка та оплата</a>
+                            </li>
+                            <li class="header__btn-item">
+                                <a href="javascript: void(0)">Обмін та повернення</a>
+                            </li>
+                            <li class="header__btn-item">
+                                <a href="javascript: void(0)">Відгуки</a>
+                            </li>
+                            <li class="header__btn-item">
+                                <a href="javascript: void(0)">FAQ</a>
+                            </li>
+                            <li class="header__btn-item">
+                                <a href="javascript: void(0)">Партнери</a>
+                            </li>
+                            <li class="header__btn-item">
+                                <a href="javascript: void(0)">Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header__block">
+                <div class="header__btn header__btn--lang js-submenu">
+                    <div class="header__btn-item">
+                        <span>
+                            ua
+                        </span>
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#141B34"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="header__btn-box">
+                        <ul class="header__btn-list">
+                            <li class="header__btn-item">
+                                <a href="javascript: void(0)" class="active">ua</a>
+                            </li>
+                            <li class="header__btn-item">
+                                <a href="javascript: void(0)">en</a>
+                            </li>
+                            <li class="header__btn-item">
+                                <a href="javascript: void(0)">pl</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__info">
+                    <div class="header__user">
+                        <a href="javascript: void(0)" class="header__info-ico header__info--cabinet">
+                            <img src="./assets/images/icons/ico-human.svg" alt="Icon">
+                        </a>
+                        <a href="javascript: void(0)" class="header__info-ico header__info--user">
+                            <span>B</span>
+                        </a>
+                    </div>
+                    <!-- remove toggle class  for frontend only -->
+                    <script>
+                        const wrapperUser = document.querySelector('.header__user')
+                        wrapperUser.addEventListener('click', () => {
+                            wrapperUser.classList.toggle('user')
+                        })
+                    </script>
+                    <a href="javascript: void(0)" class="header__info-ico header__info--bag js-basket-open">
+                        <lottie-player src="./assets/animation/bag.json" direction="1" mode="normal" loop
+                            autoplay></lottie-player>
+                        <span class="bag-count js-bag-total">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__items">
+                <a href="/" class="breadcrumbs__item">
+                    Головна
+                </a>
+                <span class="breadcrumbs__deco"></span>
+                <a href="javascript: void(0)" class="breadcrumbs__item">
+                    Лампа O Nail з технологіями ШІ
+                </a>
+            </div>
+        </div>
+    </div>
+    <main class="main main--product">
+        <div class="preview__anchors">
+            <div class="container">
+                <a href="#aboutProduct" class="js-anchor preview__anchors-item">
+                    все про товар
+                </a>
+                <a href="#charProduct" class="js-anchor preview__anchors-item">
+                    характеристики
+                </a>
+                <a href="#instructionProduct" class="js-anchor preview__anchors-item">
+                    інструкція використання
+                </a>
+                <a href="#reviewsProduct" class="js-anchor preview__anchors-item">
+                    відгуки
+                    <span id="totalReviews"></span>
+                </a>
+            </div>
+        </div>
+        <section class="preview" id="aboutProduct">
+            <div class="container">
+                <div class="preview__info">
+                    <div class="col">
+                        <div class="preview__gallery preview__gallery--sm swiper" id="previewSm">
+                            <div class="preview__gallery-wrapper swiper-wrapper">
+                                <div class="preview__gallery-slide swiper-slide">
+                                    <div class="gallery-box">
+                                        <img width="96" height="96" src="./assets/images/gall_sm_1.png" alt="Thumbnail">
+                                    </div>
+                                </div>
+                                <div class="preview__gallery-slide swiper-slide">
+                                    <div class="gallery-box">
+                                        <img width="96" height="96" src="./assets/images/gall_sm_2.png" alt="Thumbnail">
+                                    </div>
+                                </div>
+                                <div class="preview__gallery-slide swiper-slide">
+                                    <div class="gallery-box">
+                                        <img width="96" height="96" src="./assets/images/gall_sm_3.png" alt="Thumbnail">
+                                    </div>
+                                </div>
+                                <div class="preview__gallery-slide swiper-slide">
+                                    <div class="gallery-box">
+                                        <img width="96" height="96" src="./assets/images/gall_sm_4.png" alt="Thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview__gallery preview__gallery--lg swiper" id="previewLg">
+                            <div class="preview__gallery-wrapper swiper-wrapper">
+                                <div class="preview__gallery-slide swiper-slide">
+                                    <div class="gallery-box">
+                                        <img width="555" height="511" src="./assets/images/gall_lg_1.png"
+                                            alt="Thumbnail">
+                                    </div>
+                                </div>
+                                <div class="preview__gallery-slide swiper-slide">
+                                    <div class="gallery-box">
+                                        <img width="555" height="511" src="./assets/images/gall_lg_2.png"
+                                            alt="Thumbnail">
+                                    </div>
+                                </div>
+                                <div class="preview__gallery-slide swiper-slide">
+                                    <div class="gallery-box">
+                                        <img width="555" height="511" src="./assets/images/gall_lg_3.png"
+                                            alt="Thumbnail">
+                                    </div>
+                                </div>
+                                <div class="preview__gallery-slide swiper-slide">
+                                    <div class="gallery-box">
+                                        <img width="555" height="511" src="./assets/images/gall_lg_4.png"
+                                            alt="Thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="preview__about">
+                            <h2 class="h2 preview__title">
+                                Лампа O Nail з технологіями ШІ
+                            </h2>
+                            <div class="preview__status">
+                                <img width="24" height="24" src="./assets/images/icons/ico-done.svg" alt="Icon">
+                                <p class="preview__status-title">
+                                    товар в наявності
+                                </p>
+                            </div>
+                            <div class="preview__buy">
+                                <span class="preview__price">18 800 ГРН.</span>
+                                <div class="preview__btns">
+                                    <button class="preview__btns-basket">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.27043 19.2831L4.82598 7.78307C4.92766 7.32553 5.33347 7 5.80217 7H18.2262C18.6818 7 19.0798 7.30799 19.1942 7.74904L22.1757 19.249C22.3398 19.8823 21.8618 20.5 21.2077 20.5H3.24662C2.60687 20.5 2.13165 19.9076 2.27043 19.2831Z"
+                                                stroke="white" stroke-width="2" />
+                                            <path d="M8 11V6C8 3.79086 9.79086 2 12 2V2C14.2091 2 16 3.79086 16 6V11"
+                                                stroke="white" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                        <span>купити</span>
+                                    </button>
+                                    <button class="preview__btns-quick js-quick-order">
+                                        купити в один клік
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="preview__delivery">
+                                <p class="preview__delivery-title">
+                                    Доставка:
+                                </p>
+                                <div class="preview__delivery-conditions">
+                                    <div class="delivery-box">
+                                        <div class="delivery-box__item">
+                                            <img width="24" height="24" src="./assets/images/icons/ico-np.svg"
+                                                alt="Icon">
+                                            <p>Відділення "Нова Пошта"</p>
+                                        </div>
+                                        <p class="delivery-box__title">За тарифами перевізника</p>
+                                    </div>
+                                    <div class="delivery-box">
+                                        <div class="delivery-box__item">
+                                            <img width="24" height="24" src="./assets/images/icons/ico-np.svg"
+                                                alt="Icon">
+                                            <p>Кур'єр Нова Пошта</p>
+                                        </div>
+                                        <p class="delivery-box__title">150 грн.</p>
+                                    </div>
+                                    <div class="delivery-box">
+                                        <div class="delivery-box__item">
+                                            <img width="24" height="24" src="./assets/images/icons/ico-np.svg"
+                                                alt="Icon">
+                                            <p>Поштомат "Нова Пошта"</p>
+                                        </div>
+                                        <p class="delivery-box__title">За тарифами перевізника</p>
+                                    </div>
+                                    <div class="delivery-box">
+                                        <div class="delivery-box__item">
+                                            <img width="24" height="24" src="./assets/images/icons/ico-ukr.svg"
+                                                alt="Icon">
+                                            <p>Відділення Укрпошта</p>
+                                        </div>
+                                        <p class="delivery-box__title">За тарифами перевізника</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="preview__pay">
+                                <p class="preview__pay-title">Оплата</p>
+                                <div class="preview__pay-conditions">
+                                    <div class="pay-box">
+                                        <img src="./assets/images/pay_1.png" alt="Pay Logo">
+                                    </div>
+                                    <div class="pay-box">
+                                        <img src="./assets/images/pay_2.png" alt="Pay Logo">
+                                    </div>
+                                    <div class="pay-box">
+                                        <img src="./assets/images/pay_3.png" alt="Pay Logo">
+                                    </div>
+                                    <div class="pay-box">
+                                        <img src="./assets/images/pay_4.png" alt="Pay Logo">
+                                    </div>
+                                    <div class="pay-box">
+                                        <img src="./assets/images/pay_5.png" alt="Pay Logo">
+                                    </div>
+                                    <div class="pay-box">
+                                        <img src="./assets/images/pay_6.png" alt="Pay Logo">
+                                    </div>
+                                </div>
+                                <div class="preview__pay-garant">
+                                    <div class="garant-box">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17.5 9.31956V6.90032C17.5 5.53366 17.5 4.85032 17.1632 4.40449C16.8265 3.95866 16.0651 3.74221 14.5423 3.30933C13.5018 3.01358 12.5847 2.65727 11.8519 2.33199C10.8528 1.8885 10.3533 1.66675 10 1.66675C9.64667 1.66675 9.14717 1.8885 8.14809 2.33199C7.41532 2.65727 6.4982 3.01358 5.45778 3.30933C3.93494 3.74221 3.17352 3.95866 2.83676 4.40449C2.5 4.85032 2.5 5.53366 2.5 6.90032V9.31956C2.5 14.0071 6.71897 16.8196 8.82833 17.9329C9.33425 18.1999 9.58717 18.3334 10 18.3334C10.4128 18.3334 10.6657 18.1999 11.1717 17.9329C13.281 16.8196 17.5 14.0071 17.5 9.31956Z"
+                                                stroke="#D70C18" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M10 5.83344V7.5001" stroke="#D70C18" stroke-width="1.5"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                        <p>Гарантія 24 міс.</p>
+                                    </div>
+                                    <div class="garant-box">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.6573 2.5L14.4931 3.31312C14.8664 3.67637 15.0531 3.85801 14.9873 4.01234C14.9217 4.16667 14.6577 4.16667 14.1297 4.16667H7.66218C4.35113 4.16667 1.66699 6.77834 1.66699 10C1.66699 11.2393 2.06423 12.3885 2.74158 13.3333"
+                                                stroke="#D70C18" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M6.34297 17.5L5.50729 16.6869C5.13395 16.3236 4.94728 16.142 5.01298 15.9877C5.07868 15.8334 5.34267 15.8334 5.87065 15.8334H12.3382C15.6492 15.8334 18.3333 13.2217 18.3333 10C18.3333 8.76069 17.9361 7.61155 17.2588 6.66669"
+                                                stroke="#D70C18" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <p>14 днів обмін/повернення</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <h2 class="h2 content__title scrl-mt" id="charProduct">
+                    Характеристики та переваги
+                </h2>
+                <div class="content__inner">
+                    <div class="content__col">
+                        <div class="content__char">
+                            <div class="content__char-boxes">
+                                <div class="box box--main">
+                                    <div class="box__description">
+                                        <div class="box__description-item">
+                                            <p>Тип лампи</p>
+                                            <p>LED+UV</p>
+                                        </div>
+                                        <div class="box__description-item">
+                                            <p>Вага</p>
+                                            <p>1.2 кг.</p>
+                                        </div>
+                                        <div class="box__description-item">
+                                            <p>Потужність</p>
+                                            <p>48 W</p>
+                                        </div>
+                                        <div class="box__description-item">
+                                            <p>Розміри</p>
+                                            <p>237/208/114 см</p>
+                                        </div>
+                                        <div class="box__description-item">
+                                            <p>Довжина шнура</p>
+                                            <p>150 см.</p>
+                                        </div>
+                                        <div class="box__description-item">
+                                            <p>Матеріал корпусу</p>
+                                            <p>Прорезинений Soft touch пластик</p>
+                                        </div>
+                                    </div>
+                                    <div class="box__preview">
+                                        <img loading="lazy" width="500" height="375" src="./assets/images/char_1.jpg"
+                                            alt="Thumbnail">
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="box__description">
+                                        <h3 class="h3 box__description-title">
+                                            Інтеграція технологій штучного інтелекту
+                                        </h3>
+                                        <p class="box__description-text">
+                                            Технології штучного інтелекту для ідентефікації і опромінення лише нігтів
+                                            без пошкодження шкіри рук
+                                        </p>
+                                    </div>
+                                    <div class="box__preview">
+                                        <!-- add your url for cdn -->
+                                        <img class="js-video-observer" width="500" height="375"
+                                            data-fallback="./assets/images/char_2.jpg"
+                                            data-src="https://res.cloudinary.com/dhbzdndqf/image/upload/v1753793185/gif-3_1fa9de34-ae18-4b67-aa09-22cab86b1856-2_raanmt.gif"
+                                            alt="Animation Gif">
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="box__description">
+                                        <h3 class="h3 box__description-title">
+                                            Розумне світло з 109 діодами
+                                        </h3>
+                                        <p class="box__description-text">
+                                            Лампа оснащена 109 високоточними діодами, які забезпечують рівномірне,
+                                            швидке та ефективне сушіння. Вбудований датчик зношеності стежить за станом
+                                            кожного діода — ви завжди знаєте, коли потрібно оновити пристрій для
+                                            бездоганної роботи.
+                                        </p>
+                                    </div>
+                                    <div class="box__preview">
+                                        <img loading="lazy" width="500" height="375" src="./assets/images/char_3.jpg"
+                                            alt="Thumbnail">
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="box__description">
+                                        <h3 class="h3 box__description-title">
+                                            Розумна надійність
+                                        </h3>
+                                        <p class="box__description-text">
+                                            Технологія ідентифікації штучного інтелекту LED подвоює термін служби
+                                        </p>
+                                    </div>
+                                    <div class="box__preview">
+                                        <!-- add your url for cdn -->
+                                        <img class="js-video-observer" width="500" height="375"
+                                            data-fallback="./assets/images/char_4.jpg"
+                                            data-src="https://res.cloudinary.com/dhbzdndqf/image/upload/v1753793785/gif-1-2_my0s1u.gif"
+                                            alt="Animation Gif">
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="box__description">
+                                        <h3 class="h3 box__description-title">
+                                            Підвищить вашу продуктивність
+                                        </h3>
+                                        <p class="box__description-text">
+                                            Надшвидке затвердіння за допомогою 109 світлодіодних ліхтарів. Навіть гель,
+                                            який важко затвердіти на 50% швидше, ніж раніше, міцно твердне
+                                        </p>
+                                    </div>
+                                    <div class="box__preview">
+                                        <img class="js-video-observer" width="500" height="375"
+                                            data-fallback="./assets/images/char_5.jpg"
+                                            data-src="https://res.cloudinary.com/dhbzdndqf/image/upload/v1753793785/gif-1-2_my0s1u.gif"
+                                            alt="Animation Gif">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__instruction scrl-mt" id="instructionProduct">
+                            <h2 class="h2 content__title">
+                                Інструкція використання
+                            </h2>
+                            <div class="content__instruction-box">
+                                <div class="content__instruction-video">
+                                    <button class="play-video">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0.916992 7.73269V12.2672C0.916992 16.5718 0.916992 18.724 2.20831 19.5942C3.49958 20.464 5.26559 19.5015 8.79791 17.5765L12.9578 15.309C17.2084 12.9925 19.3337 11.8342 19.3337 9.99992C19.3337 8.16562 17.2084 7.00735 12.9578 4.69082L8.79791 2.42342C5.26559 0.498337 3.49958 -0.464203 2.20831 0.405744C0.916992 1.27569 0.916992 3.428 0.916992 7.73269Z"
+                                                fill="#D70C18" />
+                                        </svg>
+                                    </button>
+                                    <video playsinline preload="none" poster="./assets/images/video_poster_1.jpg">
+                                        <source data-src="./assets/video/video_product_1.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__reviews scrl-mt" id="reviewsProduct">
+                            <div class="content__reviews-head">
+                                <h1 class="h1 content__reviews-title">
+                                    Відгуки
+                                </h1>
+
+                                <button class="content__reviews-btn">
+                                    залишити відгук
+                                </button>
+                            </div>
+                            <div class="content__reviews-boxes">
+                                <div class="box-wrapper js-review-count">
+                                    <div class="reviews-box">
+                                        <div class="reviews-box__head">
+                                            <div class="reviews-box__user">
+                                                <span class="reviews-box__abbr">
+                                                    B
+                                                </span>
+                                                <p class="reviews-box__name">
+                                                    Вікторія
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__grade">
+                                                <span class="reviews-box__date">
+                                                    23 Липня 2025
+                                                </span>
+                                                <span class="reviews-box__stars">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="reviews-box__content">
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__text">
+                                                    Дуже сподобалась тільки отримала. Дизайн ще таких не
+                                                    бачила" вау".
+                                                    здивували . швидко розібралась як нею працювати .
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__title">
+                                                    Переваги:
+                                                </p>
+                                                <p class="reviews-box__text">
+                                                    Дизайн
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__title">
+                                                    Недоліки:
+                                                </p>
+                                                <p class="reviews-box__text">
+                                                    Не виявила жодного
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__row">
+                                                <img width="88" height="88" src="./assets/images/review_1.png"
+                                                    alt="Image">
+                                                <img width="88" height="88" src="./assets/images/review_2.png"
+                                                    alt="Image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-wrapper__answer">
+                                        <div class="answer-box">
+                                            <div class="answer-box__head">
+                                                <div class="answer-box__company">
+                                                    <svg width="37" height="36" viewBox="0 0 37 36" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M18.5004 0C8.55891 0 0.5 8.05892 0.5 18.0004C0.5 27.9411 8.55891 36 18.5004 36C28.4411 36 36.5 27.9411 36.5 18.0004C36.5 8.05892 28.4411 0 18.5004 0ZM18.5004 29.8803C11.9393 29.8803 6.6205 24.5614 6.6205 18.0004C6.6205 11.4393 11.9393 6.1205 18.5004 6.1205C25.0614 6.1205 30.3803 11.4393 30.3803 18.0004C30.3803 24.5614 25.0614 29.8803 18.5004 29.8803Z"
+                                                            fill="#D70C18" />
+                                                    </svg>
+                                                    <p class="answer-box__name">
+                                                        <span>Onail</span> Ukraine
+                                                    </p>
+                                                </div>
+                                                <span class="answer-box__date">
+                                                    23 Липня 2025
+                                                </span>
+                                            </div>
+                                            <div class="answer-box__text">
+                                                <p>
+                                                    Вітаємо!
+                                                    Щиро дякуємо за Ваш відгук! Ми раді знати, що Ви
+                                                    задоволені
+                                                    дизайном.
+                                                    Ми вдячні Вам за відмічення переваг. Ми вдячні за довіру
+                                                    і
+                                                    бажаємо
+                                                    насолоджуватися використанням даного пристрою
+                                                    З повагою, офіційний представник ONAIL в Україні.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-wrapper js-review-count">
+                                    <div class="reviews-box">
+                                        <div class="reviews-box__head">
+                                            <div class="reviews-box__user">
+                                                <span class="reviews-box__abbr">
+                                                    B
+                                                </span>
+                                                <p class="reviews-box__name">
+                                                    Вікторія
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__grade">
+                                                <span class="reviews-box__date">
+                                                    23 Липня 2025
+                                                </span>
+                                                <span class="reviews-box__stars">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="reviews-box__content">
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__text">
+                                                    Дуже сподобалась тільки отримала. Дизайн ще таких не
+                                                    бачила" вау".
+                                                    здивували . швидко розібралась як нею працювати .
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__title">
+                                                    Переваги:
+                                                </p>
+                                                <p class="reviews-box__text">
+                                                    Дизайн
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__title">
+                                                    Недоліки:
+                                                </p>
+                                                <p class="reviews-box__text">
+                                                    Не виявила жодного
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-wrapper js-review-count">
+                                    <div class="reviews-box">
+                                        <div class="reviews-box__head">
+                                            <div class="reviews-box__user">
+                                                <span class="reviews-box__abbr">
+                                                    B
+                                                </span>
+                                                <p class="reviews-box__name">
+                                                    Вікторія
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__grade">
+                                                <span class="reviews-box__date">
+                                                    23 Липня 2025
+                                                </span>
+                                                <span class="reviews-box__stars">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="reviews-box__content">
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__text">
+                                                    Дуже сподобалась тільки отримала. Дизайн ще таких не
+                                                    бачила" вау".
+                                                    здивували . швидко розібралась як нею працювати .
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__title">
+                                                    Переваги:
+                                                </p>
+                                                <p class="reviews-box__text">
+                                                    Дизайн
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__title">
+                                                    Недоліки:
+                                                </p>
+                                                <p class="reviews-box__text">
+                                                    Не виявила жодного
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-wrapper js-review-count">
+                                    <div class="reviews-box">
+                                        <div class="reviews-box__head">
+                                            <div class="reviews-box__user">
+                                                <span class="reviews-box__abbr">
+                                                    B
+                                                </span>
+                                                <p class="reviews-box__name">
+                                                    Вікторія
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__grade">
+                                                <span class="reviews-box__date">
+                                                    23 Липня 2025
+                                                </span>
+                                                <span class="reviews-box__stars">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                    <img width="20" height="20" src="./assets/images/icons/ico-star.svg"
+                                                        alt="Star">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="reviews-box__content">
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__text">
+                                                    Дуже сподобалась тільки отримала. Дизайн ще таких не
+                                                    бачила" вау".
+                                                    здивували . швидко розібралась як нею працювати .
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__title">
+                                                    Переваги:
+                                                </p>
+                                                <p class="reviews-box__text">
+                                                    Дизайн
+                                                </p>
+                                            </div>
+                                            <div class="reviews-box__row">
+                                                <p class="reviews-box__title">
+                                                    Недоліки:
+                                                </p>
+                                                <p class="reviews-box__text">
+                                                    Не виявила жодного
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__box">
+                        <div class="content__box-img">
+                            <img loading="lazy" width="440" height="391" src="./assets/images/product_box.png"
+                                alt="Thumbnail">
+                        </div>
+                        <p class="content__box-title">Лампа O Nail з технологіями ШІ</p>
+                        <button class="content__box-btn">
+                            <span>ДОДАТИ В КОШИК</span>
+                            <span></span>
+                            <span>18 800 ГРН.</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="brand">
+            <div class="container">
+                <div class="brand__content">
+                    <div class="brand__content-col">
+                        <h2 class="brand__content-title">Станьте партнером інноваційного бренду</h2>
+                        <p class="brand__content-text">
+                            Приєднуйтесь до команди, що змінює індустрію нігтьового сервісу. Ми відкриті до співпраці з
+                            салонами, майстрами та дистриб’юторами, які цінують якість, технології та розвиток.
+                        </p>
+                        <div class="brand__content-btn">
+                            <button class="js-contact-form">
+                                зв’язатись з нами
+                            </button>
+                        </div>
+                        <div class="swiper brand__content-marquee js-marquee">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/icons/logo_lg.svg" alt="Logo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/icons/logo_lg.svg" alt="Logo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/icons/logo_lg.svg" alt="Logo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/icons/logo_lg.svg" alt="Logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brand__content-col">
+                        <div class="brand__content-img">
+                            <img loading="lazy" width="724" height="645" src="./assets/images/brand_pic.jpg"
+                                alt="Thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="interest">
+            <div class="container">
+                <h2 class="interest__title">
+                    Вас можуть також зацікавити
+                </h2>
+                <div class="interest__cards">
+                    <div class="interest__card">
+                        <div class="interest__card-thumb">
+                            <img loading="lazy" width="428" height="391" src="./assets/images/interest_1.png"
+                                alt="Thumbnail">
+                        </div>
+                        <p class="interest__card-title">
+                            Бездротовий пульт керування
+                        </p>
+                        <button class="interest__card-btn">
+                            <span>ДОДАТИ В КОШИК</span>
+                            <span></span>
+                            <span>18 800 ГРН.</span>
+                        </button>
+                    </div>
+                    <div class="interest__card">
+                        <div class="interest__card-thumb">
+                            <img loading="lazy" width="428" height="391" src="./assets/images/interest_2.png"
+                                alt="Thumbnail">
+                        </div>
+                        <p class="interest__card-title">
+                            Змінні батареї та зарядна станція
+                        </p>
+                        <button class="interest__card-btn">
+                            <span>ДОДАТИ В КОШИК</span>
+                            <span></span>
+                            <span>18 800 ГРН.</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="container">
+                <div class="footer__content-contact">
+                    <div class="footer__content-logo">
+                        <img loading="lazy" width="152" height="144" src="./assets/images/icons/logo.svg" alt="Logo">
+                    </div>
+                    <div class="footer__content-links">
+                        <a href="tel:+380932203020">
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
+                                        stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>+38 (093) 220-30-20</span>
+                        </a>
+                        <a href="mailto:onail_ukraine@gmail.com">
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 6L8.91302 9.91697C11.4616 11.361 12.5384 11.361 15.087 9.91697L22 6"
+                                        stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path
+                                        d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z"
+                                        stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>onail_ukraine@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__content-menu">
+                    <div class="footer__content-nav footer__content-nav--first">
+                        <p class="footer__content-title">Клієнтам та партнерам</p>
+                        <nav class="footer__content-item">
+                            <ul class="footer__content-list">
+                                <li class="footer__content-point">
+                                    <a href="javascript: void(0)">Про бренд</a>
+                                </li>
+                                <li class="footer__content-point">
+                                    <a href="javascript: void(0)">Де купити?</a>
+                                </li>
+                                <li class="footer__content-point">
+                                    <a href="javascript: void(0)">Контакти</a>
+                                </li>
+                                <li class="footer__content-point">
+                                    <a href="javascript: void(0)">Доставка та оплата</a>
+                                </li>
+                            </ul>
+                            <ul class="footer__content-list">
+                                <li class="footer__content-point">
+                                    <a href="javascript: void(0)">Новини</a>
+                                </li>
+                                <li class="footer__content-point">
+                                    <a href="javascript: void(0)">Обмін та повернення</a>
+                                </li>
+                                <li class="footer__content-point">
+                                    <a href="javascript: void(0)">FAQ</a>
+                                </li>
+                                <li class="footer__content-point">
+                                    <a href="javascript: void(0)">Відгуки</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__content-nav footer__content-nav--second">
+                        <p class="footer__content-title">каталог продуктів</p>
+                        <ul class="footer__content-list">
+                            <li class="footer__content-point">
+                                <a href="javascript: void(0)">Лампа O NAIL з вбудованим ШІ</a>
+                            </li>
+                            <li class="footer__content-point">
+                                <a href="javascript: void(0)">Бездротовий пульт керування</a>
+                            </li>
+                            <li class="footer__content-point">
+                                <a href="javascript: void(0)">Змінні батареї та зарядна станція</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__content-submit">
+                    <form class="footer__content-form footer-form">
+                        <label for="footerEmail" class="footer-form__title">
+                            Підпишіться на оновлення
+                        </label>
+                        <input class="footer-form__field" type="email" name="footerEmail" id="footerEmail"
+                            placeholder="ваш email">
+                        <button class="footer-form__button" type="submit">
+                            підписатись
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="container">
+                <div class="footer__info-col">
+                    <p class="footer__info-copy">© 2025 ONAIL UA</p>
+                    <div class="footer__info-links">
+                        <a target="_blank" href="javascript: void(0)" class="footer__info-link">
+                            <span>
+                                <img loading="lazy" width="24" height="24" src="./assets/images/icons/ico-inst.svg"
+                                    alt="Instagram">
+                            </span>
+                            <span>Instagram</span>
+                        </a>
+                        <a target="_blank" href="javascript: void(0)" class="footer__info-link">
+                            <span>
+                                <img loading="lazy" width="24" height="24" src="./assets/images/icons/ico-tt.svg"
+                                    alt="TikTok">
+                            </span>
+                            <span>tiktok</span>
+                        </a>
+                        <a target="_blank" href="javascript: void(0)" class="footer__info-link">
+                            <span>
+                                <img loading="lazy" width="24" height="24" src="./assets/images/icons/ico-tube.svg"
+                                    alt="YouTube">
+                            </span>
+                            <span>youtube</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__info-col">
+                    <a target="_blank" href="javascript: void(0)" class="footer__info-author">
+                        <span>Website by</span>
+                        <span>ESFIRUM</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
