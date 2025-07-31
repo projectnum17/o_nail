@@ -9,8 +9,10 @@
     <meta name="theme-color" content="#D70C18">
     <link rel="icon" href="./assets/images/icons/logo.svg" type="image/svg+xml" />
     <title>O'Nail | Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer type="module" src="./assets/scripts/main.js"></script>
 </head>
 
@@ -325,6 +327,173 @@
             </div>
         </div>
     </div>
+    <div class="contact-modal js-contact-modal">
+        <div class="contact-modal__inner">
+            <div class="contact-modal__wrapper">
+                <button class="contact-modal__close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#D70C18" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="contact-modal__img">
+                    <img loading="lazy" src="./assets/images/contact-modal.jpg" alt="Thumbnail">
+                </div>
+                <div class="contact-modal__content">
+                    <h2 class="h2 contact-modal__title">
+                        Заповніть форму
+                    </h2>
+                    <p class="contact-modal__text">
+                        Наші менеджери зв’яжуться з вами як найшвидше.
+                    </p>
+                    <form class="contact-modal__form">
+                        <div class="contact-modal__fields">
+                            <div class="contact-modal__field">
+                                <label for="contactModalName" class="contact-modal__label">
+                                    Ваше Ім’я
+                                </label>
+                                <input required name="contactModalName" id="contactModalName" type="text"
+                                    class="contact-modal__input">
+                            </div>
+                            <div class="contact-modal__field">
+                                <label for="contactModalSurname" class="contact-modal__label">
+                                    Прізвище
+                                </label>
+                                <input required name="contactModalSurname" id="contactModalSurname" type="text"
+                                    class="contact-modal__input">
+                            </div>
+                            <div class="contact-modal__field">
+                                <label for="contactModalPhone" class="contact-modal__label">
+                                    Номер телефону
+                                </label>
+                                <input required name="contactModalPhone" id="contactModalPhone" type="tel"
+                                    class="contact-modal__input">
+                            </div>
+                            <div class="contact-modal__field">
+                                <label for="contactModalMail" class="contact-modal__label">
+                                    Email
+                                </label>
+                                <input required name="contactModalMail" id="contactModalMail" type="email"
+                                    class="contact-modal__input">
+                            </div>
+                        </div>
+                        <button type="submit" class="contact-modal__submit">
+                            надіслати запит
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="contact-modal__success">
+                <button class="contact-modal__success-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#D70C18" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <h2 class="h2 contact-modal__success-title">
+                    Дякуємо за довіру
+                </h2>
+                <p class="contact-modal__success-text">
+                    Наш менеджер зв’яжеться з вами найближчим часом для уточнення всіх деталей
+                </p>
+                <a href="/" class="contact-modal__success-link">
+                    повернутись на головну
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="video-modal js-video-modal" id="videoModal">
+        <div class="video-modal__inner">
+            <div class="video-modal__wrapper js-video-modal__wrapper">
+                <button class="video-modal__close js-video-modal__close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5.00068 14.9993M14.9993 15L5 5.00071" stroke="#D70C18" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="video-modal__play js-video-modal__play">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.916992 7.73269V12.2672C0.916992 16.5718 0.916992 18.724 2.20831 19.5942C3.49958 20.464 5.26559 19.5015 8.79791 17.5765L12.9578 15.309C17.2084 12.9925 19.3337 11.8342 19.3337 9.99992C19.3337 8.16562 17.2084 7.00735 12.9578 4.69082L8.79791 2.42342C5.26559 0.498337 3.49958 -0.464203 2.20831 0.405744C0.916992 1.27569 0.916992 3.428 0.916992 7.73269Z"
+                            fill="#D70C18"></path>
+                    </svg>
+                </button>
+                <div class="video-modal__video">
+                    <video controls playsinline id="videoPlayer"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="influencer-modal js-influencer">
+        <div class="influencer-modal__inner">
+            <div class="influencer-modal__wrapper">
+                <button class="influencer-modal__close js-influencer-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#D70C18" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+                <div class="influencer-modal__img">
+                    <img loading="lazy" width="623" height="640" src="./assets/images/influencer-pic.jpg" alt="Picture">
+                    <div class="influencer-modal__info">
+                        <h3 class="h3 influencer-modal__title">
+                            Ми перевіримо вашу заявку та надішлемо персональний промокод на email.
+                        </h3>
+                        <p class="influencer-modal__subtitle">
+                            Кількість знижок обмежена — встигніть подати заявку першими!
+                        </p>
+                    </div>
+                </div>
+                <div class="influencer-modal__contact">
+                    <p class="influencer-modal__sale">Знижка 75%</p>
+                    <p class="influencer-modal__about">
+                        для блогерів та інфлюенсерів
+                    </p>
+                    <p class="influencer-modal__text">
+                        Запускаємо новий продукт в Україні — і хочемо поділитися ним з вами! Якщо ви ведете блог, маєте
+                        активну аудиторію та бажаєте протестувати наш продукт, ми підготували ексклюзивну знижку 75%.
+                    </p>
+                    <form class="influencer-modal__form">
+                        <div class="form-field">
+                            <label for="influencerFormName" class="form-field__label">
+                                Ваше Ім’я
+                            </label>
+                            <input required type="text" id="influencerFormName" name="influencerFormName"
+                                class="form-field__input">
+                        </div>
+                        <div class="form-field">
+                            <label for="influencerFormLinks" class="form-field__label">
+                                Посилання на Instagram / TikTok / YouTube / іншу соцмережу
+                            </label>
+                            <input required type="text" id="influencerFormLinks" name="influencerFormLinks"
+                                class="form-field__input">
+                        </div>
+                        <div class="form-fields">
+                            <div class="col">
+                                <label for="influencerFormValue" class="form-field__label">
+                                    Кількість підписників
+                                </label>
+                                <input required type="number" id="influencerFormValue" name="influencerFormValue"
+                                    class="form-field__input">
+                            </div>
+                            <div class="col">
+                                <label for="influencerFormEmail" class="form-field__label">
+                                    Email для зв’язку
+                                </label>
+                                <input required type="email" id="influencerFormEmail" name="influencerFormEmail"
+                                    class="form-field__input">
+                            </div>
+                        </div>
+                        <button class="form-submit">
+                            надіслати запит
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
     <header class="header">
         <div class="container">
             <div class="header__block">
@@ -462,7 +631,545 @@
             </div>
         </div>
     </header>
-    <main class="main">main</main>
+    <main class="main main--home">
+        <a href="javascript: void(0)" class="marquee-block js-influencer-open">
+            <div class="marquee-block__item">
+                <span>Отримати знижку 75%</span>
+                <span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8 2.5C11.0376 2.5 13.5 4.96243 13.5 8C13.5 11.0376 11.0376 13.5 8 13.5C4.96243 13.5 2.5 11.0376 2.5 8C2.5 4.96243 4.96243 2.5 8 2.5Z"
+                            stroke="#D70C18" stroke-width="5" />
+                    </svg>
+                </span>
+                <span>дізнатись умови</span>
+                <span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8 2.5C11.0376 2.5 13.5 4.96243 13.5 8C13.5 11.0376 11.0376 13.5 8 13.5C4.96243 13.5 2.5 11.0376 2.5 8C2.5 4.96243 4.96243 2.5 8 2.5Z"
+                            stroke="#D70C18" stroke-width="5" />
+                    </svg>
+                </span>
+            </div>
+        </a>
+        <section class="intro">
+            <div class="intro__circles">
+                <img src="./assets/images/circles.svg" alt="Decoration">
+            </div>
+            <div class="container">
+                fd
+            </div>
+        </section>
+        <section class="benefits">
+            <div class="container">
+                <div class="benefits__items">
+                    <div class="benefits__item">
+                        <div class="benefits__item-ico">
+                            <lottie-player src="./assets/animation/check.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <p class="benefits__item-text">
+                            Гарантія та сертифікати якості
+                        </p>
+                    </div>
+                    <div class="benefits__item">
+                        <div class="benefits__item-ico">
+                            <lottie-player src="./assets/animation/bar_code.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <p class="benefits__item-text">
+                            Тільки оригінальна продукція
+                        </p>
+                    </div>
+                    <div class="benefits__item">
+                        <div class="benefits__item-ico">
+                            <lottie-player src="./assets/animation/track_order.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <p class="benefits__item-text">
+                            Пряма співпраця з виробником
+                        </p>
+                    </div>
+                    <div class="benefits__item">
+                        <div class="benefits__item-ico">
+                            <lottie-player src="./assets/animation/diamond.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <p class="benefits__item-text">
+                            Ексклюзивно у нас
+                        </p>
+                    </div>
+                    <div class="benefits__item">
+                        <div class="benefits__item-ico">
+                            <lottie-player src="./assets/animation/service.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <p class="benefits__item-text">
+                            Обслуговування та повернення
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="container">
+                <h2 class="catalog__title">
+                    Каталог o nail
+                </h2>
+                <div class="catalog__cards">
+                    <div class="catalog__card">
+                        <div class="catalog__card-thumb">
+                            <img loading="lazy" width="428" height="391" src="./assets/images/product_box.png"
+                                alt="Thumbnail">
+                        </div>
+                        <p class="catalog__card-title">
+                            Лампа O Nail з технологіями ШІ
+                        </p>
+                        <button class="catalog__card-btn">
+                            <span>ДОДАТИ В КОШИК</span>
+                            <span></span>
+                            <span>18 800 ГРН.</span>
+                        </button>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="catalog__card-thumb">
+                            <img loading="lazy" width="428" height="391" src="./assets/images/interest_1.png"
+                                alt="Thumbnail">
+                        </div>
+                        <p class="catalog__card-title">
+                            Бездротовий пульт керування
+                        </p>
+                        <button class="catalog__card-btn">
+                            <span>ДОДАТИ В КОШИК</span>
+                            <span></span>
+                            <span>3 800 ГРН.</span>
+                        </button>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="catalog__card-thumb">
+                            <img loading="lazy" width="428" height="391" src="./assets/images/interest_2.png"
+                                alt="Thumbnail">
+                        </div>
+                        <p class="catalog__card-notfound">
+                            немає в наявності
+                        </p>
+                        <p class="catalog__card-title">
+                            Змінні батареї та зарядна станція
+                        </p>
+                        <button class="catalog__card-btn">
+                            <span>
+                                повідомити про наявність
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="container">
+                advantages
+            </div>
+        </section>
+        <section class="future">
+            <video class="future__video js-video-autoplay" poster="./assets/images/circle-poster.jpg" muted autoplay
+                loop playsinline>
+                <source data-src="./assets/video/ring_decoration.mp4" type="video/mp4">
+                <p>Your browser does not support the video tag.</p>
+            </video>
+            <div class="container">
+                <div class="future__about">
+                    <h2 class="future__title">
+                        <span>Технології майбутнього</span> вже сьогодні
+                    </h2>
+                    <h3 class="future__subtitle">
+                        це не фантастика, а реальність, яку можна використовувати щодня.
+                    </h3>
+                    <div class="future__btns">
+                        <button class="future__btns-btn">
+                            <span>ДОДАТИ В КОШИК</span>
+                            <span></span>
+                            <span>3 800 ГРН.</span>
+                        </button>
+                        <a href="javascript: void(0)" class="future__btns-link">
+                            <span>детальніше</span>
+                            <span>
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 1C1.5 1 4.5 3.946 4.5 5C4.5 6.0541 1.5 9 1.5 9" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="future__product">
+                <div class="future__product-hand hand--left">
+                    <img loading="lazy" src="./assets/images/hand-left.png" alt="Picture">
+                </div>
+                <div class="future__product-pic">
+                    <img width="789" height="592" loading="lazy" src="./assets/images/product-pic.png" alt="Thumbnail">
+                </div>
+                <div class="future__product-hand hand--right">
+                    <img loading="lazy" src="./assets/images/hand-right.png" alt="Picture">
+                </div>
+            </div>
+        </section>
+        <section class="videos">
+            <div class="container">
+                <h2 class="videos__title">
+                    Більше, ніж лампа — <br> <span>персональний nail-асистент</span>
+                </h2>
+
+                <div class="videos__gallery swiper js-video-gallery">
+                    <div class="videos__gallery-wrapper swiper-wrapper">
+                        <div class="videos__gallery-slide swiper-slide js-slide">
+                            <div data-video="./assets/video/ring_decoration.mp4" class="videos-box js-video-start">
+                                <div class="videos-box__wrapper">
+                                    <div class="videos-box__poster">
+                                        <img src="./assets/images/videos_pic_1.jpg" alt="Poster">
+                                    </div>
+                                    <span class="videos-box__play">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.9997 36.6668C29.2044 36.6668 36.6663 29.2049 36.6663 20.0002C36.6663 10.7954 29.2044 3.3335 19.9997 3.3335C10.7949 3.3335 3.33301 10.7954 3.33301 20.0002C3.33301 29.2049 10.7949 36.6668 19.9997 36.6668Z"
+                                                stroke="white" stroke-width="1.5" />
+                                            <path
+                                                d="M15.833 18.6662V21.3335C15.833 23.8657 15.833 25.1317 16.5926 25.6435C17.3522 26.1552 18.391 25.589 20.4688 24.4567L22.9158 23.1228C25.4162 21.7602 26.6663 21.0788 26.6663 19.9998C26.6663 18.9208 25.4162 18.2395 22.9158 16.8768L20.4688 15.5431C18.391 14.4107 17.3522 13.8445 16.5926 14.3562C15.833 14.8679 15.833 16.134 15.833 18.6662Z"
+                                                fill="white" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="videos__gallery-slide swiper-slide js-slide">
+                            <div data-video="./assets/video/video_product_1.mp4" class="videos-box js-video-start">
+                                <div class="videos-box__wrapper">
+                                    <div class="videos-box__poster">
+                                        <img src="./assets/images/videos_pic_2.jpg" alt="Poster">
+                                    </div>
+                                    <span class="videos-box__play">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.9997 36.6668C29.2044 36.6668 36.6663 29.2049 36.6663 20.0002C36.6663 10.7954 29.2044 3.3335 19.9997 3.3335C10.7949 3.3335 3.33301 10.7954 3.33301 20.0002C3.33301 29.2049 10.7949 36.6668 19.9997 36.6668Z"
+                                                stroke="white" stroke-width="1.5" />
+                                            <path
+                                                d="M15.833 18.6662V21.3335C15.833 23.8657 15.833 25.1317 16.5926 25.6435C17.3522 26.1552 18.391 25.589 20.4688 24.4567L22.9158 23.1228C25.4162 21.7602 26.6663 21.0788 26.6663 19.9998C26.6663 18.9208 25.4162 18.2395 22.9158 16.8768L20.4688 15.5431C18.391 14.4107 17.3522 13.8445 16.5926 14.3562C15.833 14.8679 15.833 16.134 15.833 18.6662Z"
+                                                fill="white" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="videos__gallery-slide swiper-slide js-slide">
+                            <div data-video="./assets/video/ring_decoration.mp4" class="videos-box js-video-start">
+                                <div class="videos-box__wrapper">
+                                    <div class="videos-box__poster">
+                                        <img src="./assets/images/videos_pic_3.jpg" alt="Poster">
+                                    </div>
+                                    <span class="videos-box__play">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.9997 36.6668C29.2044 36.6668 36.6663 29.2049 36.6663 20.0002C36.6663 10.7954 29.2044 3.3335 19.9997 3.3335C10.7949 3.3335 3.33301 10.7954 3.33301 20.0002C3.33301 29.2049 10.7949 36.6668 19.9997 36.6668Z"
+                                                stroke="white" stroke-width="1.5" />
+                                            <path
+                                                d="M15.833 18.6662V21.3335C15.833 23.8657 15.833 25.1317 16.5926 25.6435C17.3522 26.1552 18.391 25.589 20.4688 24.4567L22.9158 23.1228C25.4162 21.7602 26.6663 21.0788 26.6663 19.9998C26.6663 18.9208 25.4162 18.2395 22.9158 16.8768L20.4688 15.5431C18.391 14.4107 17.3522 13.8445 16.5926 14.3562C15.833 14.8679 15.833 16.134 15.833 18.6662Z"
+                                                fill="white" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="videos__gallery-slide swiper-slide js-slide">
+                            <div data-video="./assets/video/video_product_1.mp4" class="videos-box js-video-start">
+                                <div class="videos-box__wrapper">
+                                    <div class="videos-box__poster">
+                                        <img src="./assets/images/videos_pic_4.jpg" alt="Poster">
+                                    </div>
+                                    <span class="videos-box__play">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.9997 36.6668C29.2044 36.6668 36.6663 29.2049 36.6663 20.0002C36.6663 10.7954 29.2044 3.3335 19.9997 3.3335C10.7949 3.3335 3.33301 10.7954 3.33301 20.0002C3.33301 29.2049 10.7949 36.6668 19.9997 36.6668Z"
+                                                stroke="white" stroke-width="1.5" />
+                                            <path
+                                                d="M15.833 18.6662V21.3335C15.833 23.8657 15.833 25.1317 16.5926 25.6435C17.3522 26.1552 18.391 25.589 20.4688 24.4567L22.9158 23.1228C25.4162 21.7602 26.6663 21.0788 26.6663 19.9998C26.6663 18.9208 25.4162 18.2395 22.9158 16.8768L20.4688 15.5431C18.391 14.4107 17.3522 13.8445 16.5926 14.3562C15.833 14.8679 15.833 16.134 15.833 18.6662Z"
+                                                fill="white" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="videos__gallery-slide swiper-slide js-slide">
+                            <div data-video="./assets/video/ring_decoration.mp4" class="videos-box js-video-start">
+                                <div class="videos-box__wrapper">
+                                    <div class="videos-box__poster">
+                                        <img src="./assets/images/videos_pic_5.jpg" alt="Poster">
+                                    </div>
+                                    <span class="videos-box__play">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.9997 36.6668C29.2044 36.6668 36.6663 29.2049 36.6663 20.0002C36.6663 10.7954 29.2044 3.3335 19.9997 3.3335C10.7949 3.3335 3.33301 10.7954 3.33301 20.0002C3.33301 29.2049 10.7949 36.6668 19.9997 36.6668Z"
+                                                stroke="white" stroke-width="1.5" />
+                                            <path
+                                                d="M15.833 18.6662V21.3335C15.833 23.8657 15.833 25.1317 16.5926 25.6435C17.3522 26.1552 18.391 25.589 20.4688 24.4567L22.9158 23.1228C25.4162 21.7602 26.6663 21.0788 26.6663 19.9998C26.6663 18.9208 25.4162 18.2395 22.9158 16.8768L20.4688 15.5431C18.391 14.4107 17.3522 13.8445 16.5926 14.3562C15.833 14.8679 15.833 16.134 15.833 18.6662Z"
+                                                fill="white" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="brand">
+            <div class="container">
+                <div class="brand__content">
+                    <div class="brand__content-col">
+                        <h2 class="brand__content-title">Станьте партнером інноваційного бренду</h2>
+                        <p class="brand__content-text">
+                            Приєднуйтесь до команди, що змінює індустрію нігтьового сервісу. Ми відкриті до співпраці з
+                            салонами, майстрами та дистриб’юторами, які цінують якість, технології та розвиток.
+                        </p>
+                        <div class="brand__content-btn">
+                            <button class="js-contact-form">
+                                зв’язатись з нами
+                            </button>
+                        </div>
+                        <div
+                            class="swiper brand__content-marquee js-marquee swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden">
+                            <div class="swiper-wrapper" id="swiper-wrapper-599110d83f473e318" aria-live="off"
+                                style="transform: translate3d(-906px, 0px, 0px); transition-duration: 5000ms;">
+
+                                <div class="swiper-slide" role="group" aria-label="2 / 4" data-swiper-slide-index="1"
+                                    style="margin-right: 40px;">
+                                    <img src="./assets/images/icons/logo_lg.svg" alt="Logo">
+                                </div>
+                                <div class="swiper-slide swiper-slide-prev" role="group" aria-label="3 / 4"
+                                    data-swiper-slide-index="2" style="margin-right: 40px;">
+                                    <img src="./assets/images/icons/logo_lg.svg" alt="Logo">
+                                </div>
+                                <div class="swiper-slide swiper-slide-active" role="group" aria-label="4 / 4"
+                                    data-swiper-slide-index="3" style="margin-right: 40px;">
+                                    <img src="./assets/images/icons/logo_lg.svg" alt="Logo">
+                                </div>
+                                <div class="swiper-slide swiper-slide-next" role="group" aria-label="1 / 4"
+                                    data-swiper-slide-index="0" style="margin-right: 40px;">
+                                    <img src="./assets/images/icons/logo_lg.svg" alt="Logo">
+                                </div>
+                            </div>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                        </div>
+                    </div>
+                    <div class="brand__content-col">
+                        <div class="brand__content-img">
+                            <img loading="lazy" width="724" height="645" src="./assets/images/brand_pic.jpg"
+                                alt="Thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <h2 class="h2 partners__title">Де купити?</h2>
+                <div class="partners__cards">
+                    <div class="partners__card">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/rozetka.png" alt="Rozetka" loading="lazy" width="172" height="73">
+                    </div>
+                    <div class="partners__card" style="display: none;">
+                        <img src="./assets/images/comfy.png" alt="Comfy" loading="lazy" width="172" height="73">
+                    </div>
+                </div>
+                <button class="partners__btn js-partners-more">
+                    показати всіx
+                </button>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <div class="news__head">
+                    <h2 class="h2 news__title">
+                        Останні новини
+                    </h2>
+                    <a href="javascript: void(0)" class="news__link">
+                        <span>всі новини</span>
+                        <span>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 1C1.5 1 4.5 3.946 4.5 5C4.5 6.0541 1.5 9 1.5 9" stroke="white"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="news__item">
+                    <a href="javascript: void(0)" class="news-card">
+                        <div class="news-card__col">
+                            <span class="news-card__date">17 Червня 2025</span>
+                            <p class="news-card__title">
+                                Заборона TPO в косметиці у ЄС з 1 вересня 2025 року
+                            </p>
+                            <span class="news-card__label">
+                                Поради експертів
+                            </span>
+                        </div>
+                        <div class="news-card__col">
+                            <div class="news-card__thumb">
+                                <img loading="lazy" width="385" height="264" src="./assets/images/news_2.jpg"
+                                    alt="Thumbnail">
+                            </div>
+                            <div class="news-card__info">
+                                <p class="news-card__text">
+                                    24 червня 2024 року Європейська комісія повідомила Світову організацію торгівлі
+                                    (WTO) про оновлення регламенту щодо косметичних продуктів, зокрема — про заборону
+                                    використання речовин класу CMR, які можуть бути канцерогенними, мутагенними або
+                                    токсичними для репродуктивної системи. У цьому списку — Trimethylbenzoyl
+                                    Diphenylphosphine Oxide, більш відомий у косметичній індустрії як TPO.
+                                </p>
+                                <div class="news-card__cta">
+                                    <span>
+                                        детальніше
+                                    </span>
+                                    <span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 1C1.5 1 4.5 3.946 4.5 5C4.5 6.0541 1.5 9 1.5 9" stroke="white"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="innovation">
+            <img class="innovation__bg" src="./assets/images/bg-innovation.jpg" alt="BG Thumbnail">
+            <div class="container">
+                <div class="innovation__content">
+                    <h2 class="innovation__title">
+                        Інновації без страху
+                    </h2>
+                    <p class="innovation__text">
+                        Замовляйте зараз і тестуйте в реальних умовах. AI-лампа з можливістю повернення протягом 30 днів
+                        але ми впевнені про те що ви будете в захваті.
+                    </p>
+                    <div data-video="./assets/video/ring_decoration.mp4" class="innovation__box js-video-start">
+                        <div class="innovation__box-poster">
+                            <img width="360" height="240" src="./assets/images/innovation-box.jpg" alt="Thumbnail">
+                        </div>
+                        <span class="innovation__box-play">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.9997 36.6668C29.2044 36.6668 36.6663 29.2049 36.6663 20.0002C36.6663 10.7954 29.2044 3.3335 19.9997 3.3335C10.7949 3.3335 3.33301 10.7954 3.33301 20.0002C3.33301 29.2049 10.7949 36.6668 19.9997 36.6668Z"
+                                    stroke="white" stroke-width="1.5"></path>
+                                <path
+                                    d="M15.833 18.6662V21.3335C15.833 23.8657 15.833 25.1317 16.5926 25.6435C17.3522 26.1552 18.391 25.589 20.4688 24.4567L22.9158 23.1228C25.4162 21.7602 26.6663 21.0788 26.6663 19.9998C26.6663 18.9208 25.4162 18.2395 22.9158 16.8768L20.4688 15.5431C18.391 14.4107 17.3522 13.8445 16.5926 14.3562C15.833 14.8679 15.833 16.134 15.833 18.6662Z"
+                                    fill="white"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <h3 class="innovation__subtitle">
+                        Технології майбутнього з турботою про здоров’я
+                    </h3>
+                    <button class="innovation__btn js-contact-form">оформити замовлення</button>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
         <div class="footer__content">
             <div class="container">

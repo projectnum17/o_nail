@@ -1,0 +1,68 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .news {
+        margin-bottom: 160px;
+
+        .news-card {
+            padding-bottom: 0;
+            border: none;
+        }
+
+        &__head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(25, 25, 25, .2);
+        }
+
+        &__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            @include hover {
+                span {
+                    &:first-child {
+                        color: var(--accent-red);
+                    }
+                    &:last-child {
+                        transform: translateX(3px);
+                    }
+                }
+            }
+
+            span {
+                &:first-child {
+                    font: 300 16px / 100% var(--ff-base);
+                    text-transform: uppercase;
+                    @include transitions(0.3s);
+                    @include media('mobile') {
+                        font-size: 14px;
+                    }
+                }
+
+                &:last-child {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: var(--accent-red);
+                    color: var(--white);
+                    @include transitions(0.3s);
+
+                    svg {
+                        margin-left: 1px;
+                    }
+                }
+            }
+        }
+    }
+}

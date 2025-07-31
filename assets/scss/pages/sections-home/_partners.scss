@@ -1,0 +1,113 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .partners {
+        margin-bottom: 160px;
+    
+        @include media('tablet') {
+            margin-bottom: 80px;
+        }
+    
+        @include media('mobile') {
+            margin-bottom: 32px;
+        }
+    
+        &__title {
+            text-align: center;
+            margin-bottom: 40px;
+    
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
+        }
+    
+        &__link {
+            font: 300 18px / 100% var(--ff-base);
+            text-transform: uppercase;
+            display: flex;
+            max-width: 329px;
+            margin: 0 auto;
+            padding: 23px 32px;
+            border-radius: 60px;
+            margin-bottom: 40px;
+            background: var(--accent-red);
+            color: var(--white);
+            @include transitions(0.3s);
+            @include hover {
+                background: var(--dark-red);
+            }
+            @include media('mobile') {
+                font-size: 16px;
+                padding: 12px;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+        }
+    
+        &__cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 32px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid rgba(25, 25, 25, 0.2);
+    
+            @include media('mobile') {
+                gap: 12px;
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+            }
+        }
+    
+        &__card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 250px;
+            flex: 1;
+            padding: 19px 23px;
+            border-radius: 16px;
+            border: 1px solid #ecebeb;
+            background: var(--white);
+            img {
+                max-width: 172px;
+    
+                @include media('mobile') {
+                    max-width: 140px;
+                }
+            }
+    
+            @include media('mobile') {
+                max-width: 100%;
+                padding: 15px 18px;
+            }
+        }
+    
+        &__btn {
+            font: 300 16px / 100% var(--ff-base);
+            text-transform: uppercase;
+            padding: 16px 28px;
+            max-width: 190px;
+            display: flex;
+            margin: 0 auto;
+            background: transparent;
+            border-radius: 60px;
+            border: 1px solid var(--accent-red);
+            color: inherit;
+            @include transitions(0.3s);
+            @include hover {
+                background: var(--accent-red);
+                color: var(--white);
+            }
+            @include media('mobile') {
+                font-size: 14px;
+                max-width: 100%;
+                width: 100%;
+                justify-content: center;
+                padding: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .videos {
+        margin-bottom: 160px;
+        &__title {
+            font: 400 64px / 100% var(--ff-base);
+            letter-spacing: -1px;
+            text-align: center;
+            max-width: 1060px;
+            margin: 0 auto 48px;
+
+            span {
+                color: var(--accent-red);
+            }
+        }
+
+        .videos-box {
+            cursor: pointer;
+
+            &__wrapper {
+                border-radius: 16px;
+                padding: 12px;
+                background: var(--white);
+            }
+
+            &__poster {
+                border-radius: 12px;
+                overflow: hidden;
+                position: relative;
+                height: 376px;
+
+                &::after {
+                    content: '';
+                    inset: 0;
+                    width: 100%;
+                    position: absolute;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.2);
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__play {
+                display: inline-flex;
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
+                z-index: 3;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .catalog {
+        position: relative;
+        margin-bottom: 160px;
+
+        &__title {
+            font: 500 172px / 100% var(--ff-base);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            position: absolute;
+            left: 50%;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            transform: translateX(-50%);
+            background: linear-gradient(
+                180deg,
+                rgba(25, 25, 25, 0.12) 14.64%,
+                rgba(25, 25, 25, 0.08) 57.5%,
+                rgba(25, 25, 25, 0.01) 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &__cards {
+            padding-top: 85px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 23px;
+
+            @include media('desktop') {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            @include media('mobile') {
+                gap: 5px;
+            }
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+
+            @include media('desktop') {
+                padding: 0 0 40px 0;
+            }
+
+            @include media('mobile') {
+                padding: 0 12px 12px;
+            }
+
+            &:has(.catalog__card-btn:hover) {
+                .catalog__card-thumb {
+                    transform: translateY(-15px);
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: -1;
+                width: 100%;
+                height: 365px;
+                border-radius: 16px;
+                background: var(--white);
+
+                @include media('mobile') {
+                    border-radius: 12px;
+                    height: 250px;
+                }
+            }
+
+            &-thumb {
+                width: 428px;
+                height: 391px;
+                @include transitions(0.3s);
+                @include media('mobile') {
+                    width: 300px;
+                    height: 271px;
+                    margin-bottom: 5px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &-notfound {
+                font: 400 14px / 100% var(--ff-base);
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                position: absolute;
+                bottom: 150px;
+                padding: 9px 12px;
+                margin-bottom: 16px;
+                border-radius: 24px;
+                background: #d70c181a;
+                color: var(--accent-red);
+            }
+
+            &-title {
+                font: 500 24px / 100% var(--ff-base);
+                text-align: center;
+                letter-spacing: -1px;
+                margin-bottom: 36px;
+
+                @include media('mobile') {
+                    font-size: 20px;
+                    margin-bottom: 12px;
+                }
+            }
+
+            &-btn {
+                font: 400 16px / 100% var(--ff-base);
+                text-transform: uppercase;
+                padding: 17px;
+                border-radius: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                margin: 0 auto;
+                color: inherit;
+                width: 100%;
+                max-width: 438px;
+                border: 1px solid var(--accent-red);
+                @include transitions(0.3s);
+
+                span:nth-last-child(2) {
+                    display: inline-flex;
+                    width: 12px;
+                    height: 12px;
+                    flex-shrink: 0;
+                    border-radius: 50%;
+                    background: var(--accent-red);
+                    @include transitions(0.3s);
+
+                    @include media('mobile') {
+                        display: none;
+                    }
+                }
+
+                @include hover {
+                    color: var(--white);
+                    background: var(--accent-red);
+
+                    span:nth-last-child(2) {
+                        background: var(--white);
+                    }
+                }
+
+                @include media('mobile') {
+                    padding: 11px;
+                    width: 100%;
+                    max-width: 100%;
+                    flex-direction: column;
+                    gap: 3px;
+                }
+            }
+        }
+    }
+}

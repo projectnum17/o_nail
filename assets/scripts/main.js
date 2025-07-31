@@ -1,4 +1,6 @@
 'use strict';
+
+import homePage from './modules/homePage.js';
 import modals from './modules/modals.js';
 import basketFlow from './modules/basket.js';
 import toggleClass from './modules/toggleClass.js';
@@ -13,14 +15,17 @@ import cabinetFlow from './modules/cabinetFlow.js';
 import productPage from './modules/productPage.js';
 import quickOrder from './modules/quickOrder.js';
 import contactModal from './modules/contactModal.js';
+import marqueeLogo from './modules/marqueeLogo.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerFlow();
     basketFlow();
     asideMenu();
     modals();
+    homePage();
     toggleClass('.js-submenu', 'submenu');
     form();
+    marqueeLogo();
     reviews();
     orderFlow();
     activityCollection('.faq-box', 'is-open');

@@ -1,0 +1,57 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .benefits {
+        padding-top: 80px;
+
+        &__items {
+            padding-bottom: 128px;
+            gap: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &__item {
+            max-width: 224px;
+            padding: 28px 28px 40px 28px;
+            border-radius: 184px;
+            background: rgba(25, 25, 25, 0.03);
+
+            &:nth-child(2n) {
+                transform: translateY(30px);
+            }
+
+            &-ico {
+                margin-bottom: 24px;
+                display: flex;
+                justify-content: center;
+                border-radius: 184px;
+                padding: 78px 46px;
+                background: linear-gradient(180deg, #e88a90 0%, #d70c18 100%);
+            }
+
+            &-text {
+                font: 500 20px / 100% var(--ff-base);
+                letter-spacing: -1px;
+                text-align: center;
+            }
+        }
+
+        lottie-player {
+            width: 96px;
+            height: 96px;
+            display: flex;
+            flex-shrink: 0;
+            color: var(--white);
+        }
+    }
+}
