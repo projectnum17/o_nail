@@ -4,24 +4,24 @@
 .main--home {
     .partners {
         margin-bottom: 160px;
-    
+
         @include media('tablet') {
-            margin-bottom: 80px;
+            margin-bottom: 100px;
         }
-    
+
         @include media('mobile') {
-            margin-bottom: 32px;
+            margin-bottom: 68px;
         }
-    
+
         &__title {
             text-align: center;
             margin-bottom: 40px;
-    
+
             @include media('mobile') {
-                margin-bottom: 24px;
+                margin-bottom: 20px;
             }
         }
-    
+
         &__link {
             font: 300 18px / 100% var(--ff-base);
             text-transform: uppercase;
@@ -44,7 +44,7 @@
                 margin-bottom: 20px;
             }
         }
-    
+
         &__cards {
             display: flex;
             flex-wrap: wrap;
@@ -53,14 +53,17 @@
             padding-bottom: 32px;
             margin-bottom: 32px;
             border-bottom: 1px solid rgba(25, 25, 25, 0.2);
-    
+
             @include media('mobile') {
                 gap: 12px;
                 padding-bottom: 24px;
                 margin-bottom: 24px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 9px;
             }
         }
-    
+
         &__card {
             display: flex;
             align-items: center;
@@ -71,20 +74,25 @@
             border-radius: 16px;
             border: 1px solid #ecebeb;
             background: var(--white);
+
+            @include media('mobile') {
+                border-radius: 12px;
+            }
+
             img {
                 max-width: 172px;
-    
+
                 @include media('mobile') {
-                    max-width: 140px;
+                    max-width: 130px;
                 }
             }
-    
+
             @include media('mobile') {
                 max-width: 100%;
-                padding: 15px 18px;
+                padding: 10px 16px;
             }
         }
-    
+
         &__btn {
             font: 300 16px / 100% var(--ff-base);
             text-transform: uppercase;

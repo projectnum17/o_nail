@@ -57,7 +57,7 @@
             }
 
             @include media('mobile') {
-                font-size: 14px;
+                font-size: 13px;
             }
 
             &:has(+ h4) {
@@ -78,6 +78,14 @@
                 &:not(.aside-menu__item) {
                     font: 300 18px / 140% var(--ff-base);
                     letter-spacing: -1px;
+
+                    @include media('tablet') {
+                        font-size: 16px;
+                    }
+
+                    @include media('mobile') {
+                        font-size: 13px;
+                    }
                 }
                 color: var(--grey);
 
@@ -86,7 +94,7 @@
                 }
 
                 @include media('mobile') {
-                    font-size: 14px;
+                    font-size: 13px;
                 }
             }
         }
@@ -114,7 +122,8 @@
                 }
 
                 @include media('mobile') {
-                    font-size: 14px;
+                    font-size: 13px;
+                    gap: 6px;
                 }
                 &::before {
                     content: counter(count, decimal-leading-zero);
@@ -143,7 +152,7 @@
             }
 
             @include media('mobile') {
-                font-size: 18px;
+                font-size: 16px;
             }
         }
     }

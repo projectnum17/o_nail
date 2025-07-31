@@ -6,11 +6,11 @@
         margin-bottom: 160px;
 
         @include media('tablet') {
-            margin-bottom: 64px;
+            margin-bottom: 100px;
         }
 
         @include media('mobile') {
-            margin-bottom: 32px;
+            margin-bottom: 68px;
         }
 
         &__title {
@@ -25,7 +25,7 @@
             }
 
             @include media('mobile') {
-                font-size: 32px;
+                font-size: 22px;
                 margin-bottom: 12px;
             }
         }
@@ -57,7 +57,7 @@
             }
 
             @include media('mobile') {
-                padding: 0 12px 12px;
+                padding: 0 20px 24px;
             }
 
             &:has(.interest__card-btn:hover) {
@@ -80,7 +80,7 @@
 
                 @include media('mobile') {
                     border-radius: 12px;
-                    height: 250px;
+                    height: 243px;
                 }
             }
 
@@ -89,8 +89,8 @@
                 height: 391px;
                 @include transitions(0.3s);
                 @include media('mobile') {
-                    width: 300px;
-                    height: 271px;
+                    width: 289px;
+                    height: 265px;
                     margin-bottom: 5px;
                 }
 
@@ -107,8 +107,8 @@
                 margin-bottom: 36px;
 
                 @include media('mobile') {
-                    font-size: 20px;
-                    margin-bottom: 12px;
+                    font-size: 18px;
+                    margin-bottom: 16px;
                 }
             }
 
@@ -136,10 +136,6 @@
                     border-radius: 50%;
                     background: var(--accent-red);
                     @include transitions(0.3s);
-
-                    @include media('mobile') {
-                        display: none;
-                    }
                 }
 
                 @include hover {
@@ -152,11 +148,10 @@
                 }
 
                 @include media('mobile') {
-                    padding: 11px;
+                    font-size: 14px;
                     width: 100%;
                     max-width: 100%;
-                    flex-direction: column;
-                    gap: 3px;
+                    padding: 16px;
                 }
             }
         }

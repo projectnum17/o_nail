@@ -3,6 +3,215 @@
 
 .main--home {
     .advantages {
-        margin-bottom: 160px;
+        max-width: 3400px;
+        margin: 0 auto 160px;
+
+        &__wrapper {
+            min-height: calc(4 * 100vh);
+            position: relative;
+            --section-rect-inner-min-height: calc(
+                (100 * var(--vh)) - var(--section-rect-pad-top) -
+                    var(--section-rect-pad-bottom)
+            );
+        }
+
+        &__count {
+            border-radius: 16px;
+            width: 148px;
+            height: 148px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 50;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+            background: #f5f7f9;
+
+            @include media('desktop') {
+                transform: translate(0);
+                top: 150px;
+                right: 10px;
+                left: auto;
+            }
+            @include media('mobile') {
+                display: none;
+            }
+
+            &.visible {
+                opacity: 1;
+            }
+
+            span {
+                position: absolute;
+
+                &:first-child {
+                    top: 24px;
+                    left: 24px;
+                    font: 300 40px / 100% var(--ff-base);
+                    letter-spacing: -1px;
+                    color: var(--accent-red);
+                }
+
+                &:last-child {
+                    bottom: 20px;
+                    right: 20px;
+                    font: 300 20px / 100% var(--ff-base);
+                    letter-spacing: -1px;
+                }
+            }
+        }
+
+        &__content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            &-item {
+                position: sticky;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                height: calc(100 * var(--vh));
+                overflow: hidden;
+                border-top: 1px solid rgba(25, 25, 25, 0.2);
+                display: flex;
+                align-items: stretch;
+
+                @include media('mobile') {
+                    flex-direction: column;
+                    top: 66px;
+                }
+            }
+
+            &-col {
+                width: 50%;
+                flex: 1;
+
+                @include media('mobile') {
+                    width: 100%;
+                    flex: initial;
+                }
+
+                &:first-child {
+                    background: var(--white);
+                }
+
+                &:last-child {
+                    height: 936px;
+
+                    @include media('tablet') {
+                        height: 100%;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            &-about {
+                padding-block: 140px;
+                max-width: 520px;
+                margin: 0 auto;
+                align-items: center;
+                text-align: center;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                @include media('tablet') {
+                    padding-block: 100px 140px;
+                }
+                @include media('mobile') {
+                    padding-block: 60px;
+                }
+            }
+
+            &-ico {
+                display: inline-flex;
+                margin-bottom: 28px;
+                align-items: center;
+                justify-content: center;
+                width: 104px;
+                height: 104px;
+                flex-shrink: 0;
+                border-radius: 50%;
+                border: 1px solid var(--accent-red);
+
+                @include media('tablet') {
+                    width: 86px;
+                    height: 86px;
+                }
+                @include media('mobile') {
+                    width: 80px;
+                    height: 80px;
+                    margin-bottom: 12px;
+                }
+
+                img {
+                    width: 60px;
+                    height: 60px;
+
+                    @include media('tablet') {
+                        width: 54px;
+                        height: 54px;
+                    }
+                    @include media('mobile') {
+                        width: 48px;
+                        height: 48px;
+                    }
+                }
+            }
+
+            &-title {
+                font: 400 48px / 100% var(--ff-base);
+                letter-spacing: -1px;
+                padding-top: 28px;
+                margin-bottom: 24px;
+                padding-inline: 12px;
+                border-top: 1px solid rgba(25, 25, 25, 0.2);
+                position: relative;
+
+                @include media('tablet') {
+                    font-size: 36px;
+                }
+
+                @include media('mobile') {
+                    font-size: 24px;
+                    margin-bottom: 12px;
+                    padding-top: 12px;
+                    border: none;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 164px;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 1px;
+                    background: rgba(25, 25, 25, 0.2);
+                }
+            }
+
+            &-text {
+                padding-inline: 12px;
+                font: 300 18px / 140% var(--ff-base);
+                color: #525252;
+
+                @include media('tablet') {
+                    font-size: 16px;
+                }
+                @include media('mobile') {
+                    font-size: 13px;
+                }
+            }
+        }
     }
 }

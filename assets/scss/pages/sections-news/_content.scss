@@ -60,6 +60,7 @@
                 @include media('mobile') {
                     flex: 1;
                     min-width: max-content;
+                    font-size: 14px;
                 }
             }
         }

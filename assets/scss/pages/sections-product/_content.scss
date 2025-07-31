@@ -6,12 +6,13 @@
         margin-bottom: 160px;
 
         @include media('tablet') {
-            margin-bottom: 64px;
+            margin-bottom: 100px;
         }
 
         @include media('mobile') {
-            margin-bottom: 32px;
+            margin-bottom: 68px;
         }
+
         &__inner {
             display: flex;
             align-items: flex-start;
@@ -245,6 +246,13 @@
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
+                padding: 40px;
+                border-radius: 44px;
+                background: var(--white);
+                @include media('mobile') {
+                    padding: 12px;
+                    border-radius: 12px;
+                }
             }
         }
 
@@ -557,7 +565,7 @@
                     @include media('mobile') {
                         gap: 8px;
                         flex-direction: row;
-                        align-items: flex-end;
+                        align-items: flex-start;
                         margin-bottom: 12px;
                     }
                 }
@@ -566,6 +574,10 @@
                     font: 300 16px / 140% var(--ff-base);
                     letter-spacing: -1px;
                     color: var(--grey);
+
+                    @include media('mobile') {
+                        font-size: 13px;
+                    }
                 }
             }
 

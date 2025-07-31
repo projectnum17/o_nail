@@ -38,6 +38,11 @@
         border-radius: 44px;
         background: var(--white);
 
+        @include media('mobile') {
+            padding: 8px;
+            border-radius: 16px;
+        }
+
         &.play {
             .video-modal__video::after {
                 opacity: 0;
@@ -60,12 +65,23 @@
         z-index: 2;
         background: rgba(255, 255, 255, 0.4);
 
+        @include media('mobile') {
+            top: 24px;
+            right: 24px;
+            width: 24px;
+            height: 24px;
+        }
+
         svg {
             width: 20px;
             height: 20px;
             display: inline-flex;
             flex-shrink: 0;
             color: var(--accent-red);
+            @include media('mobile') {
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 
@@ -73,7 +89,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-100%, -48%);
+        transform: translate(-50%, -50%);
         width: 57px;
         height: 57px;
         z-index: 2;
@@ -83,6 +99,11 @@
         border-radius: 50%;
         background: var(--white);
         @include transitions(0.3s);
+
+        @include media('mobile') {
+            width: 45px;
+            height: 45px;
+        }
 
         svg {
             color: var(--accent-red);
@@ -95,7 +116,7 @@
 
         &.hide {
             opacity: 0;
-            transform: translate(-100%, -50%);
+            transform: translate(-50%, -45%);
         }
     }
 
@@ -105,6 +126,11 @@
         width: 100%;
         border-radius: 24px;
         overflow: hidden;
+
+        @include media('mobile') {
+            height: auto;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -114,6 +140,10 @@
             z-index: 1;
             background: rgba(25, 25, 25, 0.5);
             @include transitions(0.3s);
+        }
+
+        @include media('mobile') {
+            border-radius: 16px;
         }
     }
 

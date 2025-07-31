@@ -6,11 +6,11 @@
         margin-bottom: 160px;
 
         @include media('tablet') {
-            margin-bottom: 80px;
+            margin-bottom: 100px;
         }
 
         @include media('mobile') {
-            margin-bottom: 32px;
+            margin-bottom: 68px;
         }
 
         &__title {
@@ -38,8 +38,8 @@
                 background: var(--dark-red);
             }
             @include media('mobile') {
-                font-size: 16px;
-                padding: 12px;
+                font-size: 14px;
+                padding: 13px;
                 justify-content: center;
                 margin-bottom: 20px;
             }
@@ -75,13 +75,13 @@
                 max-width: 172px;
 
                 @include media('mobile') {
-                    max-width: 140px;
+                    max-width: 135px;
                 }
             }
 
             @include media('mobile') {
                 max-width: 100%;
-                padding: 15px 18px;
+                padding: 10px 16px;
             }
         }
 

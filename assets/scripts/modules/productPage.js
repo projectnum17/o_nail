@@ -53,6 +53,9 @@ const productPage = () => {
         new Swiper(lgGallery, {
             spaceBetween: 10,
             effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
             thumbs: {
                 swiper: smGallery,
             },

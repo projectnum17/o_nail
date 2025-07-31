@@ -4,6 +4,16 @@
 .main--home {
     .videos {
         margin-bottom: 160px;
+
+        @include media('tablet') {
+            margin-bottom: 100px;
+        }
+
+        @include media('mobile') {
+            margin-bottom: 68px;
+            overflow: hidden;
+        }
+
         &__title {
             font: 400 64px / 100% var(--ff-base);
             letter-spacing: -1px;
@@ -13,6 +23,21 @@
 
             span {
                 color: var(--accent-red);
+            }
+
+            @include media('tablet') {
+                font-size: 48px;
+            }
+
+            @include media('mobile') {
+                font-size: 24px;
+                margin: 0 auto 24px;
+            }
+        }
+
+        &__gallery {
+            @include media('mobile') {
+                overflow: visible;
             }
         }
 
@@ -30,6 +55,10 @@
                 overflow: hidden;
                 position: relative;
                 height: 376px;
+
+                @include media('mobile') {
+                    height: 332px;
+                }
 
                 &::after {
                     content: '';

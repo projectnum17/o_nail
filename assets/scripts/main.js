@@ -1,6 +1,7 @@
 'use strict';
 
 import homePage from './modules/homePage.js';
+import animationObserver from './modules/animationObserver.js';
 import modals from './modules/modals.js';
 import basketFlow from './modules/basket.js';
 import toggleClass from './modules/toggleClass.js';
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     headerFlow();
     basketFlow();
     asideMenu();
+    animationObserver();
     modals();
     homePage();
     toggleClass('.js-submenu', 'submenu');

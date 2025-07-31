@@ -96,6 +96,10 @@
                     letter-spacing: -1px;
                     overflow: hidden;
                     color: var(--grey);
+
+                    @include media('mobile') {
+                        font-size: 13px;
+                    }
                 }
             }
 

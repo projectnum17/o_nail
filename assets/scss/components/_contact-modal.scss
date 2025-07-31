@@ -110,9 +110,9 @@
         margin-bottom: 32px;
         color: var(--grey);
         @include media('mobile') {
-            margin-bottom: 24px;
+            margin-bottom: 18px;
             text-align: center;
-            font-size: 14px;
+            font-size: 13px;
         }
     }
 
@@ -171,6 +171,7 @@
 
         @include media('mobile') {
             padding: 12px;
+            font-size: 14px;
         }
     }
 

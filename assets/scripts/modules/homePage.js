@@ -1,4 +1,6 @@
 const homePage = () => {
+    if (typeof Swiper === 'undefined') return;
+
     const marqueeBlock = (selector, speed) => {
         const parent = document.querySelector(selector);
         if (!parent) return;
@@ -113,9 +115,30 @@ const homePage = () => {
         }
     };
 
-    const initVideosGallery = () => {
-        if (typeof Swiper === 'undefined') return;
+    const introGallery = () => {
+        const gallEl = document.querySelector('.js-intro-gallery');
+        if (!gallEl) return;
 
+        new Swiper(gallEl, {
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            loop: true,
+            speed: 300,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+
+            pagination: {
+                el: '.js-pagination',
+                clickable: true,
+            },
+        });
+    };
+
+    const initVideosGallery = () => {
         const sliderWrapper = document.querySelector('.js-video-gallery');
         if (!sliderWrapper) return;
 
@@ -136,6 +159,26 @@ const homePage = () => {
             spaceBetween: 32,
             speed: 800,
             autoplay: sliderAutoplay,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 12,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                992: {
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 32,
+                },
+            },
         });
     };
 
@@ -247,12 +290,54 @@ const homePage = () => {
         }
     };
 
+    const createCountBlock = () => {
+        const section = document.querySelector('.js-parent');
+        const items = document.querySelectorAll('.js-child');
+        const currentVal = document.getElementById('advCurrentVal');
+        const totalVal = document.getElementById('advTotalVal');
+        const counter = document.querySelector('.js-count');
+
+        if (!section || !items.length || !currentVal || !totalVal || !counter)
+            return;
+
+        totalVal.textContent = String(items.length).padStart(2, '0');
+
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    counter.classList.toggle('visible', entry.isIntersecting);
+                });
+            },
+            { threshold: 0.2 }
+        );
+        sectionObserver.observe(section);
+
+        const updateCurrent = () => {
+            const switchLine = window.innerHeight * 0.5;
+            let activeIndex = 0;
+
+            items.forEach((item, i) => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top <= switchLine) {
+                    activeIndex = i;
+                }
+            });
+
+            currentVal.textContent = String(activeIndex + 1).padStart(2, '0');
+        };
+
+        window.addEventListener('scroll', updateCurrent, { passive: true });
+        updateCurrent();
+    };
+
     marqueeBlock('.marquee-block', 0.2);
+    introGallery();
     videoAutoplay();
     influenceModal();
     initVideosGallery();
     initVideoModal();
     partnerFlow();
+    createCountBlock();
 };
 
 export default homePage;

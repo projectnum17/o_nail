@@ -6,11 +6,11 @@
         margin-bottom: 160px;
 
         @include media('tablet') {
-            margin-bottom: 64px;
+            margin-bottom: 100px;
         }
 
         @include media('mobile') {
-            margin-bottom: 32px;
+            margin-bottom: 68px;
         }
 
         &__content {
@@ -26,9 +26,9 @@
             }
 
             @include media('mobile') {
-                flex-direction: column-reverse;
-                gap: 20px;
-                border-radius: 12px;
+                flex-direction: column;
+                gap: 32px;
+                border-radius: 16px;
             }
 
             &-col {
@@ -42,7 +42,7 @@
                     }
 
                     @include media('mobile') {
-                        padding: 12px 12px 0 12px;
+                        padding: 0px 20px 20px 20px;
                         width: 100%;
                     }
                 }
@@ -52,7 +52,7 @@
                     padding-block: 22px;
 
                     @include media('mobile') {
-                        padding-block: 0 12px;
+                        padding-block: 32px 0;
                         max-width: 100%;
                     }
                 }
@@ -66,8 +66,8 @@
                 overflow: hidden;
 
                 @include media('mobile') {
-                    border-radius: 10px;
-                    height: 350px;
+                    border-radius: 12px;
+                    height: 280px;
                     max-width: 100%;
                 }
 
@@ -91,9 +91,10 @@
                 }
 
                 @include media('mobile') {
-                    font-size: 32px;
+                    font-size: 24px;
+                    text-align: center;
                     margin: 0 0 12px 0;
-                    padding-inline: 12px;
+                    padding-inline: 32px;
                 }
             }
 
@@ -109,9 +110,10 @@
                 }
                 @include media('mobile') {
                     margin: 0;
-                    padding-inline: 12px;
-                    font-size: 16px;
-                    margin-bottom: 12px;
+                    padding-inline: 32px;
+                    text-align: center;
+                    font-size: 12px;
+                    margin-bottom: 16px;
                 }
             }
 
@@ -122,8 +124,9 @@
                 padding-block: 28px;
 
                 @include media('mobile') {
-                    margin-bottom: 12px;
-                    padding-block: 16px;
+                    margin-bottom: 0px;
+                    padding-block: 0px;
+                    border: none;
                 }
 
                 button {
@@ -144,8 +147,8 @@
 
                     @include media('mobile') {
                         margin: 0 auto;
-                        font-size: 16px;
-                        padding: 12px 20px;
+                        font-size: 14px;
+                        padding: 13px 32px;
                     }
                 }
             }
@@ -154,6 +157,10 @@
                 overflow: visible !important;
                 overflow: hidden;
                 pointer-events: none;
+
+                @include media('mobile') {
+                    display: none;
+                }
 
                 img {
                     white-space: nowrap;
