@@ -8,17 +8,18 @@ const homePage = () => {
         if (!parent.children.length) return;
 
         const clone = parent.innerHTML;
-        const firstElement = parent.children[0];
         let i = 0;
 
         for (let j = 0; j < 8; j++) {
             parent.insertAdjacentHTML('beforeend', clone);
         }
 
-        setInterval(function () {
-            firstElement.style.marginLeft = `-${i}px`;
+        const totalWidth = parent.scrollWidth / 2;
 
-            if (i > firstElement.clientWidth) {
+        setInterval(function () {
+            parent.style.transform = `translateX(-${i}px)`;
+
+            if (i > totalWidth) {
                 i = 0;
             }
             i += speed;

@@ -2,8 +2,11 @@
 @use '../../base/mixins' as *;
 
 .main--home {
-    .marquee-block {
+    .marquee-inner {
         overflow: hidden;
+    }
+    .marquee-block {
+        // overflow: hidden;
         padding-block: 15px;
         margin-top: 84px;
         display: flex;
