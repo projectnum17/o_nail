@@ -99,7 +99,7 @@
                 }
 
                 &:last-child {
-                    height: 936px;
+                    height: 100%;
 
                     @include media('tablet') {
                         height: 100%;
@@ -114,7 +114,7 @@
             }
 
             &-about {
-                padding-block: 140px;
+                padding-block: 140px 200px;
                 max-width: 520px;
                 margin: 0 auto;
                 align-items: center;
@@ -197,6 +197,10 @@
                     transform: translateX(-50%);
                     height: 1px;
                     background: rgba(25, 25, 25, 0.2);
+                    display: none;
+                    @include media('mobile') {
+                        display: block;
+                    }
                 }
             }
 

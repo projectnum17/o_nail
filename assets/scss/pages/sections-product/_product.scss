@@ -39,7 +39,7 @@
             }
 
             &-item {
-                padding: 11px 24px;
+                padding: 11px 24px 16px 24px;
                 font: 400 14px / 100% var(--ff-base);
                 text-transform: uppercase;
                 position: relative;
@@ -68,7 +68,7 @@
                 span {
                     position: absolute;
                     right: -4px;
-                    top: 50%;
+                    top: 42%;
                     transform: translateY(-50%);
                     font: 400 12px / 100% var(--ff-base);
                     width: 20px;

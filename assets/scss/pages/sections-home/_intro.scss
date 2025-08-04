@@ -142,6 +142,13 @@
                 align-items: center;
                 justify-content: center;
 
+                &:first-child {
+                    justify-content: flex-start;
+                }
+                &:last-child {
+                    justify-content: flex-end;
+                }
+
                 &:last-child {
                     @include media('desktop') {
                         justify-content: flex-end;

@@ -331,7 +331,7 @@ const homePage = () => {
         updateCurrent();
     };
 
-    marqueeBlock('.marquee-block', 0.2);
+    marqueeBlock('.marquee-block', 0.5);
     introGallery();
     videoAutoplay();
     influenceModal();

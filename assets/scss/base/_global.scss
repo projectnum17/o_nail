@@ -20,17 +20,6 @@ body {
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    hyphens: auto;
-    overflow-wrap: break-word;
-}
-
 main {
     flex: 1;
 }
@@ -149,11 +138,10 @@ section,
     color: var(--grey);
 }
 
-
 .js-animation {
     opacity: 0;
     transform: translateY(15px);
-    @include transitions(.4s);
+    @include transitions(0.4s);
 
     &._animated {
         opacity: 1;

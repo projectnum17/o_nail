@@ -51,6 +51,24 @@
             align-items: center;
             padding: 40px;
             position: relative;
+            @include hover {
+                &::after {
+                    box-shadow: 0px 12px 32px 0px #00000014;
+                }
+
+                .interest__card-thumb {
+                    transform: translateY(-15px);
+                }
+
+                .interest__card-btn {
+                    color: var(--white);
+                    background: var(--accent-red);
+
+                    span:nth-last-child(2) {
+                        background: var(--white);
+                    }
+                }
+            }
 
             @include media('desktop') {
                 padding: 0 0 40px 0;
@@ -58,12 +76,6 @@
 
             @include media('mobile') {
                 padding: 0 20px 24px;
-            }
-
-            &:has(.interest__card-btn:hover) {
-                .interest__card-thumb {
-                    transform: translateY(-15px);
-                }
             }
 
             &::after {
@@ -77,6 +89,7 @@
                 height: 365px;
                 border-radius: 16px;
                 background: var(--white);
+                @include transitions(0.3s);
 
                 @include media('mobile') {
                     border-radius: 12px;
@@ -136,15 +149,6 @@
                     border-radius: 50%;
                     background: var(--accent-red);
                     @include transitions(0.3s);
-                }
-
-                @include hover {
-                    color: var(--white);
-                    background: var(--accent-red);
-
-                    span:nth-last-child(2) {
-                        background: var(--white);
-                    }
                 }
 
                 @include media('mobile') {

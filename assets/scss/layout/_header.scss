@@ -108,7 +108,7 @@
 
     &__cta {
         border-radius: 60px;
-        padding: 14px 26px;
+        padding: 16px 26px;
         color: inherit;
         border: 2px solid var(--accent-red);
         @include flexCenter(12px);
@@ -156,6 +156,7 @@
         max-width: 68px;
         display: inline-flex;
         flex-shrink: 0;
+        transform: translateX(-12px);
         @include media('desktop') {
             margin: 0 auto;
             position: absolute;
@@ -281,6 +282,7 @@
     &__user {
         position: relative;
         width: 44px;
+        height: 24px;
         padding-right: 20px;
         @include media('mobile') {
             width: 20px;
@@ -304,6 +306,7 @@
 
         &.user {
             width: 64px;
+            height: auto;
 
             a {
                 &:first-child {
