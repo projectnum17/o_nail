@@ -105,13 +105,13 @@ const locationFlow = () => {
         const iconAnchor = isMobile ? [12, 24] : [16, 32];
 
         const map = L.map('map', {
-            dragging: true, // разрешаем перетаскивать
-            scrollWheelZoom: true, // масштабирование колесом мыши
-            doubleClickZoom: true, // масштабирование двойным кликом
-            boxZoom: true, // масштабирование рамкой
-            keyboard: true, // управление с клавиатуры
-            touchZoom: true, // масштабирование на тач-устройствах
-            zoomControl: true, // показываем кнопки +/-
+            dragging: true,
+            scrollWheelZoom: true,
+            doubleClickZoom: true,
+            boxZoom: true,
+            keyboard: true,
+            touchZoom: true,
+            zoomControl: true,
         }).setView([49.8419, 24.0315], 10);
 
         L.tileLayer(
