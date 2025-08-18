@@ -96,7 +96,7 @@ const locationFlow = () => {
 
         const stores = getStoresFromDOM();
 
-        if (stores.length === 0) return; 
+        if (stores.length === 0) return;
 
         const isMobile = window.innerWidth < 768;
 
@@ -105,13 +105,13 @@ const locationFlow = () => {
         const iconAnchor = isMobile ? [12, 24] : [16, 32];
 
         const map = L.map('map', {
-            dragging: false,
-            scrollWheelZoom: false,
-            doubleClickZoom: false,
-            boxZoom: false,
-            keyboard: false,
-            touchZoom: false,
-            zoomControl: false,
+            dragging: true, // разрешаем перетаскивать
+            scrollWheelZoom: true, // масштабирование колесом мыши
+            doubleClickZoom: true, // масштабирование двойным кликом
+            boxZoom: true, // масштабирование рамкой
+            keyboard: true, // управление с клавиатуры
+            touchZoom: true, // масштабирование на тач-устройствах
+            zoomControl: true, // показываем кнопки +/-
         }).setView([49.8419, 24.0315], 10);
 
         L.tileLayer(
@@ -236,6 +236,28 @@ const locationFlow = () => {
                 );
             });
         }
+
+        const boxItems = document.querySelectorAll('.box-item');
+
+        boxItems.forEach((box) => {
+            box.addEventListener('click', () => {
+                const city = box.dataset.city;
+                const lat = parseFloat(box.dataset.lat);
+                const lng = parseFloat(box.dataset.lng);
+                const name = box.dataset.name;
+
+                if (!isNaN(lat) && !isNaN(lng)) {
+                    map.setView([lat, lng], 14);
+                    L.popup()
+                        .setLatLng([lat, lng])
+                        .setContent(name)
+                        .openOn(map);
+                }
+
+                boxItems.forEach((b) => b.classList.remove('active'));
+                box.classList.add('active');
+            });
+        });
     };
 
     filterFlow();
